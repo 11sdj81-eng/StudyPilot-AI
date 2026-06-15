@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">镜像法速记图</text>
+
+<rect x="445" y="105" width="14" height="300" fill="#7FA87A"/><text x="405" y="92" class="l">接地面 V=0</text>
+<circle cx="280" cy="250" r="26" fill="#C56C6C"/><text x="258" y="258" class="l" fill="#fff">+q</text>
+<circle cx="625" cy="250" r="26" fill="#6F8F68"/><text x="604" y="258" class="l" fill="#fff">-q</text>
+<line x1="280" y1="300" x2="452" y2="300" class="thin"/><line x1="625" y1="300" x2="452" y2="300" class="thin"/>
+<text x="350" y="326" class="m">d</text><text x="530" y="326" class="m">d</text>
+<rect x="90" y="390" width="300" height="55" rx="14" class="warn"/><text x="112" y="424" class="l">真电荷一侧才是求解区域</text>
+
+</svg>

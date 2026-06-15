@@ -1,0 +1,8 @@
+{
+  "cases": [
+    "gauss_piecewise_compute",
+    "potential_function_field",
+    "boundary_surface_charge",
+    "image_plane_comprehensive"
+  ]
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">电位与电场完整教学图</text>
+
+<path d="M150 150 C320 90 565 90 760 150" class="thin"/><path d="M130 250 C330 180 585 180 790 250" class="thin"/><path d="M150 355 C330 295 565 295 760 355" class="thin"/>
+<line x1="430" y1="145" x2="430" y2="348" class="line" marker-end="url(#arrow)"/><line x1="515" y1="145" x2="515" y2="348" class="line" marker-end="url(#arrow)"/>
+<text x="775" y="155" class="m">V高</text><text x="800" y="358" class="m">V低</text><text x="548" y="250" class="m">E = -∇φ</text>
+<text x="120" y="430" class="s">电场线垂直等位线，指向电位降低最快方向。</text>
+
+</svg>

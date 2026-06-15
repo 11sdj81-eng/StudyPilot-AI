@@ -1,0 +1,12 @@
+<article class="example-card">
+  <h3>{{ example.display_name }}</h3>
+  <p><span class="tag">考点：{{ example.exam_focus }}</span><span class="tag">难度：{{ example.difficulty }}</span></p>
+  <p><strong>题目：</strong>{{ example.question }}</p>
+  {% if example.diagram %}{% set diagram = example.diagram %}{% include "components/diagram_block.html" %}{% endif %}
+  <p><strong>解题模板：</strong>识别模型 → 选择公式 → 列式分区 → 检查方向/单位/边界。</p>
+  <p><strong>思路分析：</strong></p>
+  <ol class="steps">{% for step in example.solution_steps %}<li>{{ step }}</li>{% endfor %}</ol>
+  <p><strong>标准解答：</strong>{{ example.answer }}</p>
+  <p><strong>易错提醒：</strong>{{ example.common_mistakes | join("；") }}</p>
+  <p><strong>题型总结：</strong>{{ example.variants | join("；") }}</p>
+</article>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">接地平面电位讲题图</text>
+
+<rect x="455" y="80" width="12" height="350" fill="#7FA87A"/><circle cx="250" cy="175" r="23" fill="#C56C6C"/><circle cx="250" cy="335" r="18" fill="#333"/>
+<circle cx="665" cy="175" r="23" fill="#6F8F68"/><text x="226" y="164" class="l">+q</text><text x="690" y="164" class="l">-q</text><text x="225" y="365" class="l">P</text>
+<line x1="250" y1="335" x2="250" y2="175" class="thin"/><line x1="250" y1="335" x2="665" y2="175" class="thin"/>
+<text x="215" y="260" class="m">R1</text><text x="485" y="270" class="m">R2</text><text x="520" y="105" class="s">平面上 V=0 用来验证答案</text>
+
+</svg>

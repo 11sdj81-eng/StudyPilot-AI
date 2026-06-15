@@ -1,0 +1,50 @@
+{
+  "prog_gauss_law_3": {
+    "source_type": "programmatic",
+    "source_file": "gauss_exam_problem.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "gauss_law",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "gauss exam problem",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/gauss_law/images/gauss_exam_problem.svg",
+    "created_at": "2026-06-14T15:02:38.105878+00:00"
+  },
+  "prog_gauss_law_4": {
+    "source_type": "programmatic",
+    "source_file": "gauss_quick_memory.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "gauss_law",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "gauss quick memory",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/gauss_law/images/gauss_quick_memory.svg",
+    "created_at": "2026-06-14T15:02:38.106036+00:00"
+  },
+  "prog_gauss_law_5": {
+    "source_type": "programmatic",
+    "source_file": "gauss_sphere_piecewise.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "gauss_law",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "gauss sphere piecewise",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/gauss_law/images/gauss_sphere_piecewise.svg",
+    "created_at": "2026-06-14T15:02:38.106182+00:00"
+  }
+}

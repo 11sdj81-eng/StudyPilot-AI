@@ -1,0 +1,580 @@
+@page {
+  size: A4;
+  margin: 16mm 15mm 18mm;
+  background: #fbf6ea;
+  @top-left {
+    content: "StudyPilot AI · " string(course-name);
+    color: #907b5a;
+    font-size: 9pt;
+  }
+  @top-right {
+    content: "";
+    color: #907b5a;
+    font-size: 9pt;
+  }
+  @bottom-center {
+    content: counter(page);
+    background: #efe1c5;
+    border-radius: 999px;
+    color: #6e5c42;
+    font-size: 9pt;
+    padding: 2mm 4mm;
+  }
+}
+
+@page:first {
+  @top-left { content: ""; }
+  @top-right { content: ""; }
+  @bottom-center { content: ""; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #282521;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-size: 10.8pt;
+  line-height: 1.72;
+  margin: 0;
+}
+
+.running-header {
+  height: 0;
+  overflow: hidden;
+  string-set: course-name content();
+}
+
+.page-break {
+  break-after: page;
+}
+
+.cover {
+  min-height: 246mm;
+  padding: 18mm 8mm 10mm;
+  position: relative;
+}
+
+.cover-topline {
+  background: linear-gradient(90deg, #2f6f8f, #72a66d, #d6a23e);
+  border-radius: 999px;
+  height: 5px;
+  width: 70mm;
+}
+
+.brand {
+  color: #254153;
+  font-size: 24pt;
+  font-weight: 900;
+  margin-top: 18mm;
+}
+
+.subtitle {
+  color: #9a7a45;
+  font-size: 12pt;
+  margin-top: 5mm;
+}
+
+.cover h1 {
+  color: #243744;
+  font-size: 36pt;
+  line-height: 1.18;
+  margin: 30mm 0 12mm;
+  max-width: 165mm;
+}
+
+.cover-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.cover-meta span {
+  background: #fffaf0;
+  border: 1px solid #ead6b4;
+  border-radius: 999px;
+  color: #6d604f;
+  padding: 5px 12px;
+}
+
+.cover-goals {
+  background: #fffdf8;
+  border: 1px solid #ead9bd;
+  border-radius: 18px;
+  box-shadow: 0 12px 34px rgba(90, 68, 36, 0.09);
+  margin-top: 25mm;
+  padding: 10mm 12mm;
+}
+
+.cover-goals h2 {
+  color: #2f6f8f;
+  font-size: 16pt;
+  margin: 0 0 5mm;
+}
+
+.cover-goals li {
+  margin: 3mm 0;
+}
+
+.cover-goals li:empty {
+  display: none;
+}
+
+.page-label {
+  color: #b18d52;
+  font-size: 10pt;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.toc h1,
+.sources h1 {
+  color: #263c4d;
+  font-size: 25pt;
+  margin: 4mm 0 12mm;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li {
+  border-bottom: 1px dashed #dac8a8;
+  color: #3b342b;
+  font-size: 12.5pt;
+  padding: 3mm 0;
+}
+
+.toc li span {
+  color: #2f6f8f;
+  display: inline-block;
+  font-weight: 800;
+  width: 16mm;
+}
+
+.toc-level-2 {
+  font-size: 10.5pt;
+  padding-left: 9mm;
+}
+
+.toc-level-3 {
+  color: #665d50;
+  font-size: 9.5pt;
+  padding-left: 16mm;
+}
+
+.toc-level-2 span,
+.toc-level-3 span {
+  color: #a18b67;
+}
+
+.lecture-section {
+  background: #fffdf8;
+  border: 1px solid #ead9bd;
+  border-radius: 16px;
+  break-inside: auto;
+  margin: 0 0 9mm;
+  padding: 8mm 9mm;
+}
+
+.section-kicker {
+  color: #b18d52;
+  font-size: 9pt;
+  font-weight: 800;
+}
+
+.lecture-section h1 {
+  border-bottom: 2px solid #e8d7b7;
+  color: #25394a;
+  font-size: 20pt;
+  line-height: 1.25;
+  margin: 2mm 0 6mm;
+  padding-bottom: 3mm;
+}
+
+.lecture-section h2 {
+  break-after: avoid;
+  color: #315a73;
+  font-size: 14pt;
+  margin: 5mm 0 2mm;
+}
+
+.lecture-section h3 {
+  break-after: avoid;
+  color: #5d4f3f;
+  font-size: 12pt;
+  margin: 4mm 0 2mm;
+}
+
+.section-body p {
+  margin: 2mm 0 3mm;
+}
+
+.section-body ul,
+.section-body ol {
+  margin: 2mm 0 3mm;
+  padding-left: 7mm;
+}
+
+.section-body li {
+  margin: 1.5mm 0;
+}
+
+.content-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  break-inside: avoid;
+  font-size: 9.4pt;
+  margin: 4mm 0;
+  width: 100%;
+}
+
+.content-table th {
+  background: #eadfc9;
+  color: #31302b;
+  font-weight: 800;
+}
+
+.content-table th,
+.content-table td {
+  border-bottom: 1px solid #ded0b8;
+  padding: 2.8mm;
+  text-align: left;
+  vertical-align: top;
+}
+
+.content-table tr:nth-child(even) td {
+  background: rgba(255, 250, 240, 0.72);
+}
+
+.section-goals { border-left: 7px solid #2f6f8f; }
+.section-position { border-left: 7px solid #6d8c54; }
+.section-map { border-left: 7px solid #9c7bbb; }
+.section-core { border-left: 7px solid #527ca4; }
+.section-formulas { border-left: 7px solid #8062b5; }
+.section-examples { border-left: 7px solid #3d88bd; }
+.section-pitfalls { border-left: 7px solid #dd7048; }
+.section-hotspots { border-left: 7px solid #4f9d67; }
+.section-truth { border-left: 7px solid #4f8d8b; }
+.section-memory { border-left: 7px solid #d6a23e; }
+.section-self-test { border-left: 7px solid #5c8d89; }
+
+.section-examples {
+  background: #f2f8ff;
+}
+
+.section-pitfalls {
+  background: #fff5ef;
+}
+
+.section-hotspots {
+  background: #f1fbf3;
+}
+
+.section-memory {
+  background: #fff9df;
+}
+
+.section-formulas {
+  background: #f7f2ff;
+}
+
+.formula-card {
+  background: #fbf8ff;
+  border: 1px solid #d9caef;
+  border-left: 5px solid #8062b5;
+  border-radius: 12px;
+  break-inside: avoid;
+  margin: 4mm 0;
+  padding: 4mm 5mm;
+}
+
+.formula-figure {
+  background: #fbf8ff;
+  border: 1px solid #d9caef;
+  border-left: 5px solid #8062b5;
+  border-radius: 12px;
+  break-inside: avoid;
+  margin: 4mm 0;
+  padding: 4mm 5mm;
+  text-align: center;
+}
+
+.formula-figure img {
+  display: block;
+  margin: 0 auto;
+  max-height: 32mm;
+  max-width: 92%;
+}
+
+.formula-title {
+  color: #6b4ea1;
+  font-size: 9pt;
+  font-weight: 800;
+  margin-bottom: 2mm;
+}
+
+.formula-body {
+  color: #382f45;
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 11pt;
+  line-height: 1.6;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.formula-number,
+.formula-figure figcaption {
+  color: #7a6599;
+  font-size: 9pt;
+  font-weight: 800;
+  margin-top: 1.5mm;
+  text-align: right;
+}
+
+.formula-inline {
+  background: #f4eefc;
+  border-radius: 5px;
+  color: #5b3f78;
+  font-family: "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 9.5pt;
+  padding: 1px 5px;
+}
+
+.formula-inline-img {
+  display: inline-block;
+  background: #fbf8ff;
+  border-radius: 4px;
+  max-height: 8mm;
+  max-width: 62mm;
+  padding: 0 2px;
+  vertical-align: -2.2mm;
+}
+
+.formula-inline-wide {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.source-badges {
+  background: #f7efe0;
+  border: 1px solid #e7d5b7;
+  border-radius: 10px;
+  color: #715f42;
+  font-size: 9pt;
+  margin: 0 0 4mm;
+  padding: 2.5mm 3.5mm;
+}
+
+.source-badges span {
+  background: #fffaf0;
+  border: 1px solid #e2c99e;
+  border-radius: 999px;
+  color: #2f6f8f;
+  display: inline-block;
+  font-weight: 800;
+  margin-left: 2mm;
+  padding: 0.5mm 2mm;
+}
+
+.lecture-figure {
+  break-inside: avoid;
+  margin: 5mm auto;
+  text-align: center;
+}
+
+.lecture-figure img {
+  background: white;
+  border: 1px solid #dfd0b7;
+  border-radius: 14px;
+  display: block;
+  margin: 0 auto;
+  max-height: 118mm;
+  max-width: 92%;
+  padding: 2mm;
+}
+
+.lecture-figure figcaption {
+  color: #766a59;
+  font-size: 9.5pt;
+  margin-top: 2mm;
+}
+
+.lecture-figure figcaption strong {
+  color: #315a73;
+}
+
+.lecture-figure figcaption span {
+  color: #6d604f;
+  font-size: 9pt;
+}
+
+.source-group {
+  margin: 8mm 0;
+}
+
+.source-group h2 {
+  color: #315a73;
+  font-size: 14pt;
+  margin: 0 0 3mm;
+}
+
+.source-item {
+  align-items: flex-start;
+  background: #fffdf8;
+  border: 1px solid #e5d5bb;
+  border-radius: 12px;
+  display: flex;
+  gap: 4mm;
+  margin: 3mm 0;
+  padding: 4mm;
+}
+
+.source-ref {
+  background: #2f6f8f;
+  border-radius: 999px;
+  color: #ffffff;
+  flex: 0 0 auto;
+  font-size: 9pt;
+  font-weight: 800;
+  padding: 1.2mm 3mm;
+}
+
+.source-title {
+  color: #2e2a24;
+  font-weight: 800;
+}
+
+.source-meta {
+  color: #8a7554;
+  font-size: 9pt;
+  margin: 1mm 0;
+}
+
+.source-summary {
+  color: #5d5549;
+  font-size: 9.4pt;
+}
+
+.empty-note {
+  background: #fff8e9;
+  border: 1px solid #ead6b4;
+  border-radius: 12px;
+  color: #775f3a;
+  padding: 5mm;
+}
+
+strong {
+  color: #243744;
+}
+
+/* ============================================================
+   v3.0: User-selectable PDF style variants
+   ============================================================ */
+
+/* ---- GoodNotes 笔记风 ---- */
+.style-goodnotes {
+  background: #fdfaf3;
+}
+.style-goodnotes .lecture-section {
+  background: #fffdf8;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  margin: 6mm 0;
+  padding: 10mm 12mm;
+}
+.style-goodnotes h1 { color: #2d4a3e; border-bottom-color: #c8d8c0; }
+.style-goodnotes h2 { color: #3d6b55; }
+.style-goodnotes .formula-card {
+  background: #f8faf6;
+  border-color: #cddcc8;
+  border-left-color: #5d8a6e;
+}
+.style-goodnotes .cover { min-height: 240mm; }
+
+/* ---- 考研讲义风 ---- */
+.style-kaoyan {
+  font-size: 9.8pt;
+  line-height: 1.55;
+}
+.style-kaoyan .lecture-section {
+  margin: 2mm 0;
+  padding: 4mm 5mm;
+}
+.style-kaoyan h1 { font-size: 16pt; margin: 6px 0 8px; }
+.style-kaoyan h2 { font-size: 12pt; }
+.style-kaoyan .formula-card { padding: 2mm 3mm; margin: 2mm 0; }
+.style-kaoyan .formula-body { font-size: 9pt; }
+
+/* ---- 简洁黑白打印风 ---- */
+.style-print {
+  background: white;
+  color: #111;
+}
+.style-print * {
+  color: #111 !important;
+}
+.style-print .lecture-section {
+  background: white;
+  border: 1px solid #999;
+  border-left: 3px solid #333;
+  border-radius: 0;
+}
+.style-print .formula-card {
+  background: #fafafa;
+  border: 1px solid #999;
+  border-left: 3px solid #555;
+}
+.style-print .content-card,
+.style-print .section-examples,
+.style-print .section-pitfalls,
+.style-print .section-hotspots,
+.style-print .section-memory,
+.style-print .section-formulas {
+  background: white;
+}
+.style-print .cover { background: white; }
+
+/* ---- 试卷风 ---- */
+.style-exam {
+  background: white;
+  color: #111;
+  font-size: 11pt;
+}
+.style-exam .exam-section {
+  background: white;
+  border: none;
+  margin: 2mm 0;
+  padding: 2mm;
+}
+.style-exam h1 { font-size: 16pt; text-align: center; border-bottom: 2px solid #333; }
+.style-exam h2 { font-size: 13pt; }
+.style-exam .exam-header { text-align: center; margin-bottom: 10mm; }
+.style-exam .exam-meta { text-align: center; color: #555; margin: 4mm 0; }
+.style-exam .exam-notice { border: 1px solid #333; padding: 4mm; margin: 6mm 0; }
+
+/* ---- Shared exam/sprint/plan elements ---- */
+.exam-header, .sprint-header, .plan-header {
+  text-align: center;
+  margin-bottom: 10mm;
+}
+.exam-header h1, .sprint-header h1, .plan-header h1 {
+  font-size: 24pt;
+  border-bottom: 3px solid #2f6f8f;
+  padding-bottom: 4mm;
+}
+.exam-meta { display: flex; justify-content: center; gap: 12px; margin: 3mm 0; color: #665d50; }
+.exam-section, .sprint-section, .plan-section {
+  break-inside: avoid;
+  margin: 4mm 0;
+  padding: 4mm;
+}
+.sprint-section h2 { font-size: 13pt; color: #333; border-bottom: 1px solid #ccc; }
+.sprint-section { font-size: 9.5pt; line-height: 1.4; }
+.plan-section h2 { font-size: 14pt; color: #2f6f8f; }
+.style-note { color: #8d7b5a; font-size: 9pt; font-style: italic; margin: 4mm 0; text-align: center; }

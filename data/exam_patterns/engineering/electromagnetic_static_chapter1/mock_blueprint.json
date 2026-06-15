@@ -1,0 +1,11 @@
+{
+  "duration_minutes": 90,
+  "total_score": 100,
+  "sections": [
+    {"question_type": "choice", "count": 5, "score_each": 4, "target_average_level": 3.0},
+    {"question_type": "fill", "count": 5, "score_each": 4, "target_average_level": 3.0},
+    {"question_type": "short", "count": 2, "score_each": 10, "target_average_level": 3.5},
+    {"question_type": "compute", "count": 1, "score_each": 20, "target_average_level": 4.0},
+    {"question_type": "comprehensive", "count": 1, "score_each": 20, "target_average_level": 4.5}
+  ]
+}

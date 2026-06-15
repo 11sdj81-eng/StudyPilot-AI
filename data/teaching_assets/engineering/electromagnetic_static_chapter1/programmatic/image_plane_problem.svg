@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">镜像法试卷题图</text>
+
+<rect x="455" y="100" width="12" height="300" fill="#7FA87A"/><circle cx="300" cy="235" r="25" fill="#C56C6C"/><text x="276" y="226" class="l">+q</text>
+<line x1="300" y1="285" x2="462" y2="285" class="thin"/><text x="365" y="313" class="m">d</text><text x="500" y="238" class="s">接地导体平面</text>
+
+</svg>

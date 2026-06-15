@@ -1,0 +1,7 @@
+<article class="formula-card">
+  <div><strong>{{ formula.display_name }}</strong><span class="formula-no">({{ formula.number }})</span></div>
+  <div class="formula-line" data-tex="{{ formula.latex | e }}">{{ formula.display_text }}</div>
+  <div class="mjx-formula">\( {{ formula.latex }} \)</div>
+  <p><strong>含义：</strong>{{ formula.user_visible_text }}</p>
+  <p><strong>适用条件：</strong>{{ formula.conditions }}</p>
+</article>

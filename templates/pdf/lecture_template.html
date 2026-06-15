@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div class="running-header">{{ course_name }}</div>
+  <section class="cover page-break">
+    <div class="cover-topline"></div>
+    <div class="brand">StudyPilot AI</div>
+    <div class="subtitle">专业课程精学讲义</div>
+    <h1>{{ course_name }}</h1>
+    <div class="cover-meta">
+      {% if university %}<span>{{ university }}</span>{% endif %}
+      <span>{{ task_type }}</span>
+      <span>{{ generated_at }}</span>
+    </div>
+    <div class="cover-goals">
+      <h2>学习目标摘要</h2>
+      <ul>
+        {% for goal in goals %}
+        <li>{{ goal }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="toc page-break">
+    <div class="page-label">Contents</div>
+    <h1>目录</h1>
+    <ol>
+      {% for item in toc %}
+      <li class="toc-level-{{ item.level }}"><span>{{ item.index }}</span>{{ item.title }}</li>
+      {% endfor %}
+      <li><span>{{ "%02d"|format(sections|length + 1) }}</span>参考来源</li>
+    </ol>
+  </section>
+
+  <main>
+    {% for section in sections %}
+    <section class="lecture-section {{ section.class_name }}">
+      <div class="section-kicker">{{ "%02d"|format(loop.index) }}</div>
+      <h1>{{ section.title }}</h1>
+      <div class="section-body">
+        {{ section.html | safe }}
+      </div>
+    </section>
+    {% endfor %}
+  </main>
+
+  <section class="sources page-break">
+    <div class="page-label">References</div>
+    <h1>参考来源</h1>
+    {% if source_groups %}
+      {% for group_name, rows in source_groups.items() %}
+      <div class="source-group">
+        <h2>{{ group_name }}</h2>
+        {% for source in rows %}
+        <div class="source-item">
+          <div class="source-ref">{{ source.ref }}</div>
+          <div class="source-main">
+            <div class="source-title">{{ source.filename }}</div>
+            <div class="source-meta">第 {{ source.page }} 页 · {{ source.resource_type }}</div>
+            <div class="source-summary">{{ source.summary }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    {% else %}
+    <p class="empty-note">本次生成未检索到可展示来源。</p>
+    {% endif %}
+  </section>
+</body>
+</html>

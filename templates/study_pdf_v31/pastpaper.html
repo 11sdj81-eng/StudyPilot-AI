@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>真题精讲</h1>
+  <p class="subtitle">按老师讲题方式拆：审题、建模、公式、步骤、扣分、变式</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>题型</strong><br>同类真题 / 教材例题改编</div>
+    <div class="meta-item"><strong>讲法</strong><br>先识别题型，再推导答案</div>
+    <div class="meta-item"><strong>日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+{% include "components/toc_compact.html" %}
+{% for case in cases %}
+<section class="section">
+  <h2>题 {{ loop.index }}：{{ case.display_name }}</h2>
+  <p><strong>原题/同类题：</strong>{{ case.question }}</p>
+  <p><strong>为什么这么考：</strong>{{ case.why_tested }}</p>
+  <p><strong>第一眼先看：</strong>{{ case.keyword_hint }}</p>
+  {% set diagram = case.diagram %}{% include "components/diagram_block.html" %}
+  <div class="two-col">
+    <div class="card"><h3>建模</h3><p>{{ case.modeling }}</p></div>
+    <div class="card"><h3>选公式</h3><p>{{ case.formula_text }}</p></div>
+  </div>
+  <h3>逐步解</h3>
+  {% set steps = case.solution_steps %}{% include "components/solution_steps.html" %}
+  <p><strong>标准答案：</strong>{{ case.answer }}</p>
+  {% set rubric = case.rubric %}{% include "components/rubric_box.html" %}
+  {% set mistakes = case.common_mistakes %}{% include "components/mistake_box.html" %}
+  {% set variants = case.variants %}{% include "components/variant_box.html" %}
+  <div class="tip-box"><strong>本题收获：</strong>{{ case.takeaway }}</div>
+</section>
+{% endfor %}
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

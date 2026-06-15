@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <style>{{ css_text | safe }}</style>
+  <script>
+    window.__mathjaxReady = false;
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      },
+      svg: {
+        fontCache: 'local',
+        scale: 1.0
+      },
+      options: {
+        enableMenu: false,
+        renderActions: { addMenu: [] }
+      },
+      startup: {
+        pageReady: () => MathJax.startup.defaultPageReady().then(async () => {
+          const nodes = Array.from(document.querySelectorAll('[data-tex]'));
+          for (const node of nodes) {
+            const tex = node.getAttribute('data-tex') || '';
+            const display = node.classList.contains('math-display');
+            try {
+              const svg = await MathJax.tex2svgPromise(tex, {display});
+              svg.setAttribute('data-rendered-by', 'MathJax SVG');
+              node.textContent = '';
+              node.appendChild(svg);
+              node.classList.add('math-rendered');
+            } catch (err) {
+              node.textContent = '公式渲染失败';
+              node.classList.add('math-error');
+            }
+            node.removeAttribute('data-tex');
+          }
+          document.body.classList.add('math-ready');
+          window.__mathjaxReady = true;
+        })
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body class="{{ body_class }}">
+  <section class="cover">
+    <div class="cover-rule"></div>
+    <div class="brand">StudyPilot AI</div>
+    <p class="subtitle">AI 学习教练 · 教辅讲义风</p>
+    <h1>{{ course_name }}</h1>
+    <p class="chapter">{{ title }}</p>
+    <div class="cover-meta">
+      <span>{{ university }}</span>
+      <span>{{ task_type }}</span>
+      <span>{{ generated_at }}</span>
+    </div>
+    <div class="cover-goals">
+      <h2>学习目标摘要</h2>
+      <ul>
+        {% for goal in goals %}
+        <li>{{ goal }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <p class="style-note">{{ style_note }}</p>
+  </section>
+
+  <section class="toc">
+    <p class="eyebrow">Contents</p>
+    <h1>目录</h1>
+    <ol>
+      {% for item in toc %}
+      <li class="toc-level-{{ item.level }}"><span>{{ item.index }}</span><em>{{ item.title }}</em></li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <main>
+    {% for section in sections %}
+    <section class="lecture-section section-{{ section.key }}">
+      <div class="section-index">{{ "%02d"|format(loop.index) }}</div>
+      <h1>{{ section.title }}</h1>
+      {% if section.figures and section.key in ["map"] %}
+        {% for figure in section.figures %}
+        <figure class="teaching-figure">
+          <img src="{{ figure.uri }}" alt="{{ figure.title }}">
+          <figcaption><strong>{% if figure.number %}{{ figure.number }}：{% endif %}{{ figure.title }}</strong><br>{{ figure.caption }}<br><span>来源：{{ figure.source }} · 用途：{{ figure.purpose }}</span></figcaption>
+        </figure>
+        {% endfor %}
+      {% endif %}
+      <div class="section-body">{{ section.html | safe }}</div>
+      {% if section.figures and section.key not in ["map", "examples"] %}
+        {% for figure in section.figures %}
+        <figure class="teaching-figure">
+          <img src="{{ figure.uri }}" alt="{{ figure.title }}">
+          <figcaption><strong>{% if figure.number %}{{ figure.number }}：{% endif %}{{ figure.title }}</strong><br>{{ figure.caption }}<br><span>来源：{{ figure.source }} · 用途：{{ figure.purpose }}</span></figcaption>
+        </figure>
+        {% endfor %}
+      {% endif %}
+    </section>
+    {% endfor %}
+  </main>
+
+  <section class="references">
+    <p class="eyebrow">References</p>
+    <h1>参考来源</h1>
+    <p class="ref-intro">以下资料用于核对章节范围、公式符号、考试题型与真题关联。低质量 OCR 摘要和数据库噪声不会在讲义中展示。</p>
+    {% for source in sources %}
+    <article class="source-card">
+      <div class="source-ref">{{ source.ref }}</div>
+      <div>
+        <h2>{{ source.group }} · {{ source.title }}</h2>
+        <p>{{ source.meta }}</p>
+        <p>{{ source.usage }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+</body>
+</html>

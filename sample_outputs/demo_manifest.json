@@ -1,0 +1,62 @@
+{
+  "project": "StudyPilot AI",
+  "version": "v5.2 Final",
+  "generated_at": "2026-06-15T08:07:28.136658+00:00",
+  "user_example_input": "明天考电磁场，我只有3小时，高斯定理和镜像法不稳，帮我安排复习。",
+  "course": "电磁场与电磁波",
+  "chapter": "第一章 静电场",
+  "textbook_parse": {
+    "success": true,
+    "pages": 5,
+    "chars": 2459
+  },
+  "exam_parse": {
+    "success": true,
+    "pages": 5,
+    "chars": 3673
+  },
+  "ocr_total_chars": 6132,
+  "knowledge_graph_nodes": 5,
+  "exam_pattern_candidates": 10,
+  "figure_status": {
+    "generated_at": "2026-06-15T08:07:28.136398+00:00",
+    "total_figures": 399,
+    "precise_crop_count": 3,
+    "scanned_page_count": 385,
+    "programmatic_count": 11,
+    "usable_for_pdf_count": 11,
+    "has_high_quality_crop": true,
+    "current_fallback_reason": "DocLayout-YOLO weights unavailable; no automatic figure cropping",
+    "recommendation": "Continue using v4.1 programmatic SVGs for PDF figures. Real source figures require manual cropping or DocLayout-YOLO fix."
+  },
+  "generated_files": [
+    "StudyPilot_v5_Review_RealDemo.md",
+    "full_real_pipeline_report.json",
+    "figure_status_report.json",
+    "demo_manifest.json",
+    "final_demo_report.md",
+    "final_acceptance_report.md"
+  ],
+  "current_limitations": [
+    "DocLayout-YOLO 权重不可用 → 无自动教材插图裁剪",
+    "MinerU 已安装但未完整测试",
+    "Marker 模型下载中 (一次性网络延迟)",
+    "Typst CLI 需要 brew install typst 才能生成正式 PDF"
+  ],
+  "screenshot_checklist": [
+    "1. 首页 Hero + 今日学习状态卡",
+    "2. Agent 输入 + AI 理解结果",
+    "3. 学习路径图 (薄弱点高亮)",
+    "4. 结果页 - 学习建议 + 覆盖率",
+    "5. DI Worker 状态 (Debug 模式)",
+    "6. 最终 Demo 输出目录"
+  ],
+  "resume_highlights": [
+    "独立 DI Worker (Python 3.11) + 主项目 (Python 3.14) 双环境架构",
+    "PaddleOCR v3.7 真实跑通，扫描教材 OCR 6,132 字符",
+    "KnowledgeGraph 从 OCR 文本自动提取 5 个概念节点",
+    "ExamPattern 从真题 OCR 提取 10 个题型候选",
+    "Typst PDF v4.1 四类教学输出",
+    "个性化学习画像 + PersonalizationEngine"
+  ]
+}

@@ -1,0 +1,74 @@
+# Environment
+.env
+.env.*
+*.env
+!.env.example
+.venv/
+.venv-di/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# System
+.DS_Store
+.claude/
+
+# User materials and local-only data
+local_only/
+data/uploads/*
+data/raw/*
+data/materials/*
+data/courses/*
+data/*.json
+data/assets/*
+data/demo/*
+data/user_profile/*
+data/vector_store/*
+data/outputs/*
+data/parsed/*
+
+# Generated document intelligence assets
+data/figure_bank/_extracted/*
+data/figure_bank/_processed/*
+data/figure_bank/_reports/*
+data/figure_bank/**/unmatched/*
+data/figure_bank/v2/*
+data/figure_bank/index.json
+data/figure_bank/review_queue.json
+assets/generated/*
+
+# Worker environments and logs
+tools/document_intelligence_worker/.venv-di/
+tools/document_intelligence_worker/.venv/
+tools/document_intelligence_worker/logs/
+tools/document_intelligence_worker/data/parsed/
+
+# Model caches / weights
+models/
+checkpoints/
+weights/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Large PDFs are local-only by default. Keep curated lightweight samples.
+*.pdf
+!sample_outputs/*.pdf
+!docs/**/*.pdf
+
+# Keep directory structures
+!data/uploads/.gitkeep
+!data/vector_store/.gitkeep
+!data/outputs/.gitkeep
+!assets/generated/.gitkeep

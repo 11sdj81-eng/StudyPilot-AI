@@ -1,0 +1,411 @@
+{
+  "node_count": 41,
+  "edge_count": 0,
+  "nodes": [
+    {
+      "node_id": "9e9f69817cf9:p2:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "一、选择题（20 分，每空2 分）： \n1、下面说法正确的是          ： \nA. 散度是矢量，旋度是标量；B. 散度是标量，旋度是矢量；C. 散度是矢量，旋度是矢量；D. 散度是标量，旋度\n是标量； \n2、下面说法正确的是          。 \nA. \n0\n\n\n=\n；B. \n0\n\n\n=\n；C. \n0\n\n\n=\n；D. \n0\n\n\n=\n； \n3. 磁通连续性原理表明               。 \nA. 磁场是旋涡源；B. 磁场是散度源；C.自然界中存在磁荷；D. 自然界中不"
+    },
+    {
+      "node_id": "9e9f69817cf9:p2:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "一、选择题（20 分，每空2 分）： \n1、下面说法正确的是          ： \nA. 散度是矢量，旋度是标量；B. 散度是标量，旋度是矢量；C. 散度是矢量，旋度是矢量；D. 散度是标量，旋度\n是标量； \n2、下面说法正确的是          。 \nA. \n0\n\n\n=\n；B. \n0\n\n\n=\n；C. \n0\n\n\n=\n；D. \n0\n\n\n=\n； \n3. 磁通连续性原理表明               。 \nA. 磁场是旋涡源；B. 磁场是散度源；C.自然界中存在磁荷；D. 自然界中不"
+    },
+    {
+      "node_id": "9e9f69817cf9:p2:image_method",
+      "node_type": "concept_evidence",
+      "concept_id": "image_method",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "一、选择题（20 分，每空2 分）： \n1、下面说法正确的是          ： \nA. 散度是矢量，旋度是标量；B. 散度是标量，旋度是矢量；C. 散度是矢量，旋度是矢量；D. 散度是标量，旋度\n是标量； \n2、下面说法正确的是          。 \nA. \n0\n\n\n=\n；B. \n0\n\n\n=\n；C. \n0\n\n\n=\n；D. \n0\n\n\n=\n； \n3. 磁通连续性原理表明               。 \nA. 磁场是旋涡源；B. 磁场是散度源；C.自然界中存在磁荷；D. 自然界中不"
+    },
+    {
+      "node_id": "9e9f69817cf9:p3:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "7.某均匀平面波在导电媒质填充的无限大空间中传播，它应属于          波。 \nA. 非色散 ；B. 快；C. 色散；D. 慢； \n8. 在波导中有关主模的说法正确是              。 \nA. 截止波长最短的模；B. 截止波长最长的模；C. 波导波长最长的模；D. 波导波长最短的模； \n9. 根据图1.9 所示，可以判定在波导中传播的模式为              。 \nA. TE10 模；B. TE11 模；C TE01 模；D. TE02 模； \n10. 有关自由空间中电偶极子的辐射电阻正确"
+    },
+    {
+      "node_id": "9e9f69817cf9:p3:gauss_law",
+      "node_type": "concept_evidence",
+      "concept_id": "gauss_law",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "7.某均匀平面波在导电媒质填充的无限大空间中传播，它应属于          波。 \nA. 非色散 ；B. 快；C. 色散；D. 慢； \n8. 在波导中有关主模的说法正确是              。 \nA. 截止波长最短的模；B. 截止波长最长的模；C. 波导波长最长的模；D. 波导波长最短的模； \n9. 根据图1.9 所示，可以判定在波导中传播的模式为              。 \nA. TE10 模；B. TE11 模；C TE01 模；D. TE02 模； \n10. 有关自由空间中电偶极子的辐射电阻正确"
+    },
+    {
+      "node_id": "9e9f69817cf9:p4:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 4,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "2\n3\n2\n0\n0\n0\n2\n1 d (\n90\n)\n450\nd\nE\nr\nr\nr\nr\nr\n\n\n\n\n=\n\n=\n\n=\n  【4 分】 \n        球体内电荷的电量为 \n2\n4\n5\n0\n0\n0\n0\n4π d\n450\n4π\nd\n360π\nC\na\na\nQ\nr\nr\nr\nr\na\n\n\n\n=\n\n=\n\n\n=\n\n\n  【4 分】 \n        球外电场强度为 \n5\n5\n0\n2\n2\n2\n0\n0\n360π\n90\nV / m\n4π\n4π\nr\nr\nr\na\nQ\na\nr\nr\nr\n\n\n\n=\n=\n=\nE\ne\ne"
+    },
+    {
+      "node_id": "9e9f69817cf9:p4:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 4,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "2\n3\n2\n0\n0\n0\n2\n1 d (\n90\n)\n450\nd\nE\nr\nr\nr\nr\nr\n\n\n\n\n=\n\n=\n\n=\n  【4 分】 \n        球体内电荷的电量为 \n2\n4\n5\n0\n0\n0\n0\n4π d\n450\n4π\nd\n360π\nC\na\na\nQ\nr\nr\nr\nr\na\n\n\n\n=\n\n=\n\n\n=\n\n\n  【4 分】 \n        球外电场强度为 \n5\n5\n0\n2\n2\n2\n0\n0\n360π\n90\nV / m\n4π\n4π\nr\nr\nr\na\nQ\na\nr\nr\nr\n\n\n\n=\n=\n=\nE\ne\ne"
+    },
+    {
+      "node_id": "9e9f69817cf9:p4:image_method",
+      "node_type": "concept_evidence",
+      "concept_id": "image_method",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 4,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "2\n3\n2\n0\n0\n0\n2\n1 d (\n90\n)\n450\nd\nE\nr\nr\nr\nr\nr\n\n\n\n\n=\n\n=\n\n=\n  【4 分】 \n        球体内电荷的电量为 \n2\n4\n5\n0\n0\n0\n0\n4π d\n450\n4π\nd\n360π\nC\na\na\nQ\nr\nr\nr\nr\na\n\n\n\n=\n\n=\n\n\n=\n\n\n  【4 分】 \n        球外电场强度为 \n5\n5\n0\n2\n2\n2\n0\n0\n360π\n90\nV / m\n4π\n4π\nr\nr\nr\na\nQ\na\nr\nr\nr\n\n\n\n=\n=\n=\nE\ne\ne"
+    },
+    {
+      "node_id": "9e9f69817cf9:p5:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 5,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "                                   \n \n【5 分】 \n等效边界上任一点S 到原电荷及3 个镜像电荷的距离分别为电位为r1、r2、r3、r4。根据对称性，r1＝r2，r3＝r4，因\n此点S 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n0\n4π\ns\nq\nr\nr\nr\nr\n\n\n=\n−\n−\n+\n=\n              【3 分】 \n可见，等效问题与原问题边界条件相同，有相同的解。直角域中任一点P 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n4π\nP\nq\n"
+    },
+    {
+      "node_id": "9e9f69817cf9:p5:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 5,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "                                   \n \n【5 分】 \n等效边界上任一点S 到原电荷及3 个镜像电荷的距离分别为电位为r1、r2、r3、r4。根据对称性，r1＝r2，r3＝r4，因\n此点S 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n0\n4π\ns\nq\nr\nr\nr\nr\n\n\n=\n−\n−\n+\n=\n              【3 分】 \n可见，等效问题与原问题边界条件相同，有相同的解。直角域中任一点P 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n4π\nP\nq\n"
+    },
+    {
+      "node_id": "9e9f69817cf9:p5:image_method",
+      "node_type": "concept_evidence",
+      "concept_id": "image_method",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 5,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "                                   \n \n【5 分】 \n等效边界上任一点S 到原电荷及3 个镜像电荷的距离分别为电位为r1、r2、r3、r4。根据对称性，r1＝r2，r3＝r4，因\n此点S 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n0\n4π\ns\nq\nr\nr\nr\nr\n\n\n=\n−\n−\n+\n=\n              【3 分】 \n可见，等效问题与原问题边界条件相同，有相同的解。直角域中任一点P 的电位为 \n0\n1\n2\n3\n4\n1\n1\n1\n1\n(\n)\n4π\nP\nq\n"
+    },
+    {
+      "node_id": "9e9f69817cf9:p6:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 6,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "负方向流动，试求空间各处的磁场强度H。 \n解：设平行板位于XoZ平面，由于两块板都很大，因此，其电流密度Error! Reference source not found.都分布于两板\n的内侧，依据边界条件Error! Reference source not found.，\n    \ns\nn\nH\nJ\n\n=\n例如对于下板，则有 \n  \n    \ny\nz\ns\ne\nH\ne J\n\n= −\n      【3 分】 \n \n所以       Error! Reference source not found.       "
+    },
+    {
+      "node_id": "9e9f69817cf9:p6:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 6,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "负方向流动，试求空间各处的磁场强度H。 \n解：设平行板位于XoZ平面，由于两块板都很大，因此，其电流密度Error! Reference source not found.都分布于两板\n的内侧，依据边界条件Error! Reference source not found.，\n    \ns\nn\nH\nJ\n\n=\n例如对于下板，则有 \n  \n    \ny\nz\ns\ne\nH\ne J\n\n= −\n      【3 分】 \n \n所以       Error! Reference source not found.       "
+    },
+    {
+      "node_id": "9e9f69817cf9:p7:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 7,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "1. \n    ---  2\n    ---  2\n0    ---  2\n0    ---  2\nD\nH\nE\nt\nB\nE\nt\nD\nB\n\n\n\n\n=\n+\n\n\n\n\n\n\n= −\n\n\n\n\n=\n\n=\n\n分\n分\n分\n分\n  【8 分】 \n    \n    2.\n     \nE\nE\n\n\n\n\n\n=\n\n=\n 【4 分】 \n \n六、（12 分）电磁波在真空中传播，其电场强度矢量的复数表达式为  \n4\nj20π\n(\nj\n)10 e\nV/m\nz\nx\ny\n−\n−\n=\n−\nE\ne\ne\n"
+    },
+    {
+      "node_id": "9e9f69817cf9:p8:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 8,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "8\n0\n0\n1\n20π,\n3 10 m/s\nk\nv\n\n=\n=\n= \n，\n0\n0\n0\n120π\n\n\n\n=\n=\n \n根据\n2π\n20π,λ\n0.1m\nλ\nk =\n=\n=\n，所以 \n9\n3 10 Hz\nλ\nv\nf =\n= \n        \n【3 分】 \n \n(2) 磁场强度复矢量为  \n4\nj20π\n0\n0\n1\n1 (\n)10 e\n\n\n−\n−\n=\n\n=\n+\nz\nH\nz\nE\ny\njx\n \n磁场强度的瞬时值表达式为 \n4\nj\n0\n10\n( , )\nRe[\n( )e\n]\n[ cos(\n)\nsin(\n)]\n"
+    },
+    {
+      "node_id": "9e9f69817cf9:p9:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2017-2018 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 9,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "(4) 此均匀平面电磁波的电场强度矢量在x 方向和y 方向的分量振幅相等，且x 方向的分量比y 方向的分量相位超前π/2，\n故为右旋圆极化波。                            【3 分】 \n七、（12 分）填充空气的矩形波导，其截面尺寸为30mm22mm，工作频率为7.5GHz。（1）此时所有可以传播的模\n式；（2）如果波导中换成相对介电常数\n1.44\nr=\n的非磁性理想介质，则传播模式有何变化。 \n（1）（1）工作波长\n8\n9\n3 10\n40\n7.5 10\nv\nmm\nf\n\n\n=\n=\n"
+    },
+    {
+      "node_id": "2901b31f7fc0:p1:gauss_law",
+      "node_type": "concept_evidence",
+      "concept_id": "gauss_law",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 1,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "北京邮电大学2020-2021 年第二学期期末考试 \n电磁场与电磁波试题（开卷，B） \n \n试题可能用到介质常数：\n9\n0\n1\n10\n/\n36\nF m\n\n\n−\n=\n\n，\n7\n0\n4\n10\n/\nH m\n\n\n−\n=\n\n \n一（20 分）填空题（每个空2 分） \n1 关于矢量场的散度与通量，下面说法错误的是    。 \nA 散度表示矢量场通量源的体密度； \nB 散度与选择的坐标系无关； \nC 某点的散度大于0，说明该点存在吸收矢量线的沟； \nD 矢量场在闭合面的通量等于闭合面包围的通量源。 \n2 对于介质的极"
+    },
+    {
+      "node_id": "2901b31f7fc0:p2:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "5 对于时变电磁场，下面说法错误的是    。 \nA 电力线可以是闭合线； \nB 电力线可以是非闭合线； \nC 磁感应线可以是闭合线； \nD 磁感应线可以是非闭合线。 \n6 对于良导电媒质中的均匀平面波，电场比磁场的相位    ； \nA 落后\n/ 2\n\n \nB 落后\n/ 4\n\n \nC 超前\n/ 2\n\n \nD 超前\n/ 4\n\n \n7 关于电磁波的反射和折射，下列说法正确的是    。 \nA 平面电磁波垂直入射到理想导体表面后，理想介质中的合成波为行驻波 \nB 垂直极化波斜入射到理想导体表面后，理想介质中的合成"
+    },
+    {
+      "node_id": "2901b31f7fc0:p3:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "C 电偶极子的远区场是非均匀球面波 \nD 电磁辐射的能量较小，对人体伤害可以忽略不计 \n二 （10 分）如题二a 图所示，电荷按体密度\n分布在一个半径为\n的带点球体内，其中\n为常数。 \n1. 在球坐标系中计算球内外的电场和电位函数（8 分）； \n2. 若该带电球体外有一半径为的接地导体球壳（题二b 图），则空间何处的电\n场强度和电位函数会发生变化（不需要求解，2 分）。\n \n三 （10 分）如题三图所示，自由空间中半径分别为a，b 相距d 的直流带电圆\n环2 与1，d>>a，试求： \n1. 圆环1 中的电流I1 产"
+    },
+    {
+      "node_id": "2901b31f7fc0:p3:gauss_law",
+      "node_type": "concept_evidence",
+      "concept_id": "gauss_law",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "C 电偶极子的远区场是非均匀球面波 \nD 电磁辐射的能量较小，对人体伤害可以忽略不计 \n二 （10 分）如题二a 图所示，电荷按体密度\n分布在一个半径为\n的带点球体内，其中\n为常数。 \n1. 在球坐标系中计算球内外的电场和电位函数（8 分）； \n2. 若该带电球体外有一半径为的接地导体球壳（题二b 图），则空间何处的电\n场强度和电位函数会发生变化（不需要求解，2 分）。\n \n三 （10 分）如题三图所示，自由空间中半径分别为a，b 相距d 的直流带电圆\n环2 与1，d>>a，试求： \n1. 圆环1 中的电流I1 产"
+    },
+    {
+      "node_id": "2901b31f7fc0:p3:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "C 电偶极子的远区场是非均匀球面波 \nD 电磁辐射的能量较小，对人体伤害可以忽略不计 \n二 （10 分）如题二a 图所示，电荷按体密度\n分布在一个半径为\n的带点球体内，其中\n为常数。 \n1. 在球坐标系中计算球内外的电场和电位函数（8 分）； \n2. 若该带电球体外有一半径为的接地导体球壳（题二b 图），则空间何处的电\n场强度和电位函数会发生变化（不需要求解，2 分）。\n \n三 （10 分）如题三图所示，自由空间中半径分别为a，b 相距d 的直流带电圆\n环2 与1，d>>a，试求： \n1. 圆环1 中的电流I1 产"
+    },
+    {
+      "node_id": "2901b31f7fc0:p3:q327",
+      "node_type": "question_candidate",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.35
+    },
+    {
+      "node_id": "2901b31f7fc0:p4:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 4,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "U，板间充满电荷密度为\n的电荷，试求： \n1 极板间的电位分布（5 分）； \n2 极板上的电荷密度（5 分）。 \n题四图 \n五 （10 分） 如题五图所示，一半径为R 的导体球，带电量为Q，在距离球心\n距离为D 的A 处有一点电荷，带电量为q，求导体球外空间的电位分布。 \n \n题五图 \n六（10 分） \n1 根据麦克斯韦方程组阐述在有源理想介质中时变电磁场的散度源和旋度源（5\n分）； \n2 无源理想介质中，磁场表达式为\n，\n试求位移电流\n（5 分）。 \n \n七（10 分）无界自由空间存在均匀平面电磁波，电场强度的复"
+    },
+    {
+      "node_id": "2901b31f7fc0:p4:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 4,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "U，板间充满电荷密度为\n的电荷，试求： \n1 极板间的电位分布（5 分）； \n2 极板上的电荷密度（5 分）。 \n题四图 \n五 （10 分） 如题五图所示，一半径为R 的导体球，带电量为Q，在距离球心\n距离为D 的A 处有一点电荷，带电量为q，求导体球外空间的电位分布。 \n \n题五图 \n六（10 分） \n1 根据麦克斯韦方程组阐述在有源理想介质中时变电磁场的散度源和旋度源（5\n分）； \n2 无源理想介质中，磁场表达式为\n，\n试求位移电流\n（5 分）。 \n \n七（10 分）无界自由空间存在均匀平面电磁波，电场强度的复"
+    },
+    {
+      "node_id": "2901b31f7fc0:p6:gauss_law",
+      "node_type": "concept_evidence",
+      "concept_id": "gauss_law",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 6,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "2021 年《电磁场与电磁波》期末考试试题（B 卷）答案 \n一（20 分）填空题（每个空2 分） \n1C；2D；3C；4A；5D；6D；7D；8A；9B; 10D。  \n二（10 分） \n1 （8 分）电荷分布具有球对称性，选球坐标系，且\n，利用高斯\n定律可知： \n                 \n------------2 分 \n \n ------------2 分 \n选取无穷远处电位为参考点电位，电位分布如下： \n                            ------------2 分\n    "
+    },
+    {
+      "node_id": "2901b31f7fc0:p6:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 6,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "2021 年《电磁场与电磁波》期末考试试题（B 卷）答案 \n一（20 分）填空题（每个空2 分） \n1C；2D；3C；4A；5D；6D；7D；8A；9B; 10D。  \n二（10 分） \n1 （8 分）电荷分布具有球对称性，选球坐标系，且\n，利用高斯\n定律可知： \n                 \n------------2 分 \n \n ------------2 分 \n选取无穷远处电位为参考点电位，电位分布如下： \n                            ------------2 分\n    "
+    },
+    {
+      "node_id": "2901b31f7fc0:p7:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 7,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "𝐵⃗ = 𝜇0\n4𝜋∮𝐼1𝑑𝑙 \n𝑅2\n𝐶1\n= 𝜇0𝐼1𝑏\n4𝜋𝑅2 ∫\n𝑒 𝜑\n2𝜋\n0\n× (𝑒 𝑧𝑐𝑜𝑠𝛼−𝑒 𝑟𝑠𝑖𝑛𝛼)𝑑𝜑 \n= 𝜇0𝐼1𝑏\n4𝜋𝑅2 ∫\n[(𝑒⃑𝑥𝑐𝑜𝑠𝜑+ 𝑒⃑𝑦𝑠𝑖𝑛𝜑) 𝑐𝑜𝑠𝛼+ 𝑒⃑𝑧𝑠𝑖𝑛𝛼]𝑑𝜑\n2𝜋\n0\n \n= 𝑎⃑𝑧\n𝜇0𝐼1𝑏\n4𝜋𝑅2 ⋅2𝜋⋅𝑠𝑖𝑛𝛼= 𝑒⃑𝑧\n𝜇0𝐼1𝑏2\n2𝑅3 = 𝑒⃑𝑧\n𝜇0𝐼1𝑏2\n2(𝑧2+𝑏2)\n3\n2                           ------------3 分 \n由于d>>a，可以认为在C2 面上磁场均"
+    },
+    {
+      "node_id": "2901b31f7fc0:p7:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 7,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "𝐵⃗ = 𝜇0\n4𝜋∮𝐼1𝑑𝑙 \n𝑅2\n𝐶1\n= 𝜇0𝐼1𝑏\n4𝜋𝑅2 ∫\n𝑒 𝜑\n2𝜋\n0\n× (𝑒 𝑧𝑐𝑜𝑠𝛼−𝑒 𝑟𝑠𝑖𝑛𝛼)𝑑𝜑 \n= 𝜇0𝐼1𝑏\n4𝜋𝑅2 ∫\n[(𝑒⃑𝑥𝑐𝑜𝑠𝜑+ 𝑒⃑𝑦𝑠𝑖𝑛𝜑) 𝑐𝑜𝑠𝛼+ 𝑒⃑𝑧𝑠𝑖𝑛𝛼]𝑑𝜑\n2𝜋\n0\n \n= 𝑎⃑𝑧\n𝜇0𝐼1𝑏\n4𝜋𝑅2 ⋅2𝜋⋅𝑠𝑖𝑛𝛼= 𝑒⃑𝑧\n𝜇0𝐼1𝑏2\n2𝑅3 = 𝑒⃑𝑧\n𝜇0𝐼1𝑏2\n2(𝑧2+𝑏2)\n3\n2                           ------------3 分 \n由于d>>a，可以认为在C2 面上磁场均"
+    },
+    {
+      "node_id": "2901b31f7fc0:p8:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 8,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "根据静电场边界条件    \n                            --------------1 分 \n              --------------2 分 \n                 --------------2 分 \n五（10 分） \n \n导体球不接地且带电，利用镜像法得镜像电荷包括两个：距离球心为\n，带电量\n为\n的点电荷1，球心处带电量为\n的点电荷2。           ---------------1 分 \n其中  \n                         "
+    },
+    {
+      "node_id": "2901b31f7fc0:p8:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 8,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "根据静电场边界条件    \n                            --------------1 分 \n              --------------2 分 \n                 --------------2 分 \n五（10 分） \n \n导体球不接地且带电，利用镜像法得镜像电荷包括两个：距离球心为\n，带电量\n为\n的点电荷1，球心处带电量为\n的点电荷2。           ---------------1 分 \n其中  \n                         "
+    },
+    {
+      "node_id": "2901b31f7fc0:p8:image_method",
+      "node_type": "concept_evidence",
+      "concept_id": "image_method",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 8,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "根据静电场边界条件    \n                            --------------1 分 \n              --------------2 分 \n                 --------------2 分 \n五（10 分） \n \n导体球不接地且带电，利用镜像法得镜像电荷包括两个：距离球心为\n，带电量\n为\n的点电荷1，球心处带电量为\n的点电荷2。           ---------------1 分 \n其中  \n                         "
+    },
+    {
+      "node_id": "2901b31f7fc0:p10:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2020-2021 第二学期 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 10,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "八（10 分） \n1 （5 分）由于入射角 \n， \n此时平行极化电磁波发生全折射，反射波中只存在垂直极化电磁波，为线极化波； \n----------3 分 \n由于入射波为圆极化电磁波，折射波中平行极化电磁波和垂直极化电磁波振幅不\n相等，因此折射波为左旋椭圆极化波。                          ----------2 分 \n \n2  （5 分）分析电磁波的表达式可知，电磁波从\n空间入射到分界面，反射\n波在轴和\n轴的分量均为正值，即 \n                    ----------3"
+    },
+    {
+      "node_id": "2679fec49d4f:p1:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 1,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "期末考试试题 \n一、选择题（10 题，20 分） \n1. 对静电场而言，如果旋度存在，则下面相关描述中一定正确的是（A） \nA. \n0\nE\n∇×\n=\n\n       B.\n0\nD\n∇×\n=\n\n       C. \nE\nρ\n∇×\n=\n\n        D. \nE\nϕ\n∇×\n=\n\n   \n2. 下面有关恒定电场中导体的描述，其中正确的是（B） \nA. 导体是等位体           B. 导体内部有恒定电流       \nC. 导体表面是等位面       D. 导体内部电场为零   \n3. 下面有关恒定磁场"
+    },
+    {
+      "node_id": "2679fec49d4f:p1:boundary_conditions",
+      "node_type": "concept_evidence",
+      "concept_id": "boundary_conditions",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 1,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "期末考试试题 \n一、选择题（10 题，20 分） \n1. 对静电场而言，如果旋度存在，则下面相关描述中一定正确的是（A） \nA. \n0\nE\n∇×\n=\n\n       B.\n0\nD\n∇×\n=\n\n       C. \nE\nρ\n∇×\n=\n\n        D. \nE\nϕ\n∇×\n=\n\n   \n2. 下面有关恒定电场中导体的描述，其中正确的是（B） \nA. 导体是等位体           B. 导体内部有恒定电流       \nC. 导体表面是等位面       D. 导体内部电场为零   \n3. 下面有关恒定磁场"
+    },
+    {
+      "node_id": "2679fec49d4f:p1:q14",
+      "node_type": "question_candidate",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 1,
+      "parser_name": "fallback",
+      "confidence": 0.35
+    },
+    {
+      "node_id": "2679fec49d4f:p1:q1257",
+      "node_type": "question_candidate",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 1,
+      "parser_name": "fallback",
+      "confidence": 0.35
+    },
+    {
+      "node_id": "2679fec49d4f:p2:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "1.（6 分） 某无源区域填充理想介质，且该区域内时谐电磁场的角频率为ω。\n请写出：a.该时谐电磁场所满足的微分形式复数麦克斯韦方程组；b. 电场强度\n所满足的复数形式的波动方程。 \n答案：a. (4 分) \n0\n    \n            \n \n        \nH\nJ\nj D\nE\nj B\nD\nB\nω\nω\nρ\n∇×\n=\n+\n∇×\n= −\n∇⋅\n=\n\n∇⋅\n=\n\n\n\n\n\n\n\n\n　\n　　\n    b.(2 分) \n2\n2\n0\nE\nE\nω µε\n∇\n+\n=\n\n\n \n \n2.（4 分"
+    },
+    {
+      "node_id": "2679fec49d4f:p2:potential_gradient",
+      "node_type": "concept_evidence",
+      "concept_id": "potential_gradient",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "1.（6 分） 某无源区域填充理想介质，且该区域内时谐电磁场的角频率为ω。\n请写出：a.该时谐电磁场所满足的微分形式复数麦克斯韦方程组；b. 电场强度\n所满足的复数形式的波动方程。 \n答案：a. (4 分) \n0\n    \n            \n \n        \nH\nJ\nj D\nE\nj B\nD\nB\nω\nω\nρ\n∇×\n=\n+\n∇×\n= −\n∇⋅\n=\n\n∇⋅\n=\n\n\n\n\n\n\n\n\n　\n　　\n    b.(2 分) \n2\n2\n0\nE\nE\nω µε\n∇\n+\n=\n\n\n \n \n2.（4 分"
+    },
+    {
+      "node_id": "2679fec49d4f:p2:image_method",
+      "node_type": "concept_evidence",
+      "concept_id": "image_method",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 2,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "1.（6 分） 某无源区域填充理想介质，且该区域内时谐电磁场的角频率为ω。\n请写出：a.该时谐电磁场所满足的微分形式复数麦克斯韦方程组；b. 电场强度\n所满足的复数形式的波动方程。 \n答案：a. (4 分) \n0\n    \n            \n \n        \nH\nJ\nj D\nE\nj B\nD\nB\nω\nω\nρ\n∇×\n=\n+\n∇×\n= −\n∇⋅\n=\n\n∇⋅\n=\n\n\n\n\n\n\n\n\n　\n　　\n    b.(2 分) \n2\n2\n0\nE\nE\nω µε\n∇\n+\n=\n\n\n \n \n2.（4 分"
+    },
+    {
+      "node_id": "2679fec49d4f:p3:electric_field",
+      "node_type": "concept_evidence",
+      "concept_id": "electric_field",
+      "source_file": "2023 电磁场与电磁波 期末试卷.pdf",
+      "page_number": 3,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": " \n四、（10 分）自由空间中某均匀平面波电场为\n8\n(6\n10\n2\n)\n37.7\n/\nj\nt\nz\ny\nE\ne\ne\nV\nm\nπ\nπ\n×\n−\n=\n\n\n。请计\n算给出：a. 频率和传播方向；b. 波长和相速度；c. 瞬时值形式的磁场强度表\n达式；d. 坡印廷矢量。 \n答案：a.(2 分) \n8\n3 10\nf\nHz\n= ×\n，沿z 轴方向传播；  \nb.(3 分)\n2\n2\n1m\nπ\nβ\nπ\nλ\nβ\n=\n⇒\n=\n=\n；\n8\n0\n0\n1\n3 10\n/\npv\nc\nm s\nµ ε\n=\n=\n×\n或\n \nc.(3 分) \n8\n("
+    },
+    {
+      "node_id": "e32ee9dcfdb1:p319:gauss_law",
+      "node_type": "concept_evidence",
+      "concept_id": "gauss_law",
+      "source_file": "概率论与随机过程.pdf",
+      "page_number": 319,
+      "parser_name": "fallback",
+      "confidence": 0.45,
+      "snippet": "        5.2.1  问题的提出\n        5.2.2  中心极限定理\n        5.2.3  中心极限定理的应用举例\n    第5章  思维导图\n    习题5\n第6章  随机过程的概念及其统计特性\n    6.1  随机过程的概念\n        6.1.1  随机过程的定义\n        6.1.2  随机过程的分类\n    6.2  随机过程的有限维分布和数字特征\n        6.2.1  随机过程的有限维分布\n        6.2.2  随机过程的数字特征\n        6."
+    }
+  ],
+  "edges": []
+}

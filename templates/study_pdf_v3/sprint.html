@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover compact">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>考前冲刺讲义</h1>
+  <p class="subtitle">30 分钟快速抓主线，5 分钟保底拿分</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>任务</strong><br>Sprint PDF · 考前冲刺</div>
+    <div class="meta-item"><strong>范围</strong><br>高斯定理、镜像法、边界条件、电位、能量</div>
+    <div class="meta-item"><strong>生成日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+
+<section class="toc">
+  <h2>目录</h2>
+  <ol class="toc-list">
+    {% for item in toc %}<li><span>{{ item }}</span><span></span></li>{% endfor %}
+  </ol>
+</section>
+
+<section class="section">
+  <h2>最后 30 分钟怎么读</h2>
+  <div class="sprint-card">
+    <ol>
+      <li>先扫高斯定理和镜像法，确认会建模。</li>
+      <li>再背边界条件和电位负梯度，避免填空失分。</li>
+      <li>最后用自测题检查方向、分段和边界条件。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <h2>高频救命卡</h2>
+  {% for concept in concepts %}
+    <article class="sprint-card">
+      <h3>{{ concept.name }}</h3>
+      <p><strong>一句话：</strong>{{ concept.plain_explanation }}</p>
+      <p><strong>必会公式：</strong>{{ concept.formula_texts | join("；") }}</p>
+      <p><strong>考法：</strong>{{ concept.exam_usage | join("；") }}</p>
+      <p><strong>最容易丢分：</strong>{{ concept.common_mistakes[0] }}</p>
+    </article>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>必背公式</h2>
+  {% for formula in formulas %}{% include "components/formula_card.html" %}{% endfor %}
+</section>
+
+<section class="section">
+  <h2>关键图像速记</h2>
+  {% for diagram in diagrams %}{% include "components/diagram_block.html" %}{% endfor %}
+</section>
+
+<section class="section">
+  <h2>5 分钟保底题</h2>
+  {% for q in rescue_questions %}
+  <article class="card no-break">
+    <h3>{{ loop.index }}. {{ q.title }}</h3>
+    <p>{{ q.question }}</p>
+    <p><strong>答案：</strong>{{ q.answer }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>最后检查清单</h2>
+  <ul>
+    <li>高斯定理题是否先判断对称性。</li>
+    <li>边界条件是否区分切向 E 和法向 D。</li>
+    <li>电位求电场是否写了负号。</li>
+    <li>镜像法是否说明只在求解区域有效。</li>
+    <li>能量密度是否保留 1/2。</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

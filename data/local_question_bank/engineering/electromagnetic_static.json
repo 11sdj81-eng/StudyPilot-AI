@@ -1,0 +1,357 @@
+{
+  "subject_type": "engineering",
+  "course_name": "电磁场与电磁波",
+  "chapter": "第一章 静电场",
+  "concept_db": [
+    {
+      "id": "electric_field",
+      "name": "电场强度",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "电场强度与库仑定律",
+      "definition": "电场强度是单位正试验电荷在电场中某点所受的力。",
+      "plain_explanation": "它告诉你电场在某一点有多强、方向朝哪里。",
+      "why_important": "点电荷电场是连续分布电荷、高斯定理和电位计算的基础。",
+      "prerequisites": ["矢量", "库仑定律"],
+      "related_formulas": ["point_charge_field"],
+      "common_mistakes": ["只加电场大小而不做矢量叠加"],
+      "exam_usage": ["选择题判断矢量方向", "计算题作为电位和能量的基础"]
+    },
+    {
+      "id": "gauss_law",
+      "name": "高斯定理",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "高斯定理",
+      "definition": "闭合曲面上的电位移通量等于该曲面包围的自由电荷。",
+      "plain_explanation": "把一个闭合面想成袋子，袋子里面有多少自由电荷，决定穿出袋子的总通量。",
+      "why_important": "它是球对称、柱对称和平面对称场强计算的最高频工具。",
+      "prerequisites": ["电位移矢量", "通量"],
+      "related_formulas": ["gauss_law_integral", "uniform_sphere_inside", "uniform_sphere_outside"],
+      "common_mistakes": ["没有对称性时硬把场强提出积分号", "球内包围电荷写成总电荷"],
+      "exam_usage": ["均匀带电球体", "无限长线电荷", "无限大平面"]
+    },
+    {
+      "id": "potential_gradient",
+      "name": "电位与电场关系",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "电位",
+      "definition": "静电场可由标量电位描述，电场强度等于电位的负梯度。",
+      "plain_explanation": "电位像高度，电场指向电位下降最快的方向。",
+      "why_important": "给电位求电场是选择题、填空题和计算题的高频考法。",
+      "prerequisites": ["梯度", "静电场无旋"],
+      "related_formulas": ["potential_gradient_formula", "point_charge_potential"],
+      "common_mistakes": ["忘记负号", "认为电位为零处电场一定为零"],
+      "exam_usage": ["电位函数求场", "电位差计算"]
+    },
+    {
+      "id": "boundary_conditions",
+      "name": "边界条件",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "静电场边界条件",
+      "definition": "介质分界面两侧的切向电场和法向电位移满足连续或跳变条件。",
+      "plain_explanation": "过界面时不是所有场量都连续，要先分切向和法向。",
+      "why_important": "边界条件是介质题和导体题的核心约束。",
+      "prerequisites": ["电场强度", "电位移矢量"],
+      "related_formulas": ["boundary_tangential_e", "boundary_normal_d"],
+      "common_mistakes": ["把法向 E 写成连续", "混淆 E 和 D"],
+      "exam_usage": ["选择题", "填空题", "介质分界面计算"]
+    },
+    {
+      "id": "image_method",
+      "name": "镜像法",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "镜像法",
+      "definition": "用求解区域外的假想电荷等效替代导体边界的影响。",
+      "plain_explanation": "镜像电荷是计算工具，不是真实存在的电荷。",
+      "why_important": "接地导体平面和导体球是期末常见综合题。",
+      "prerequisites": ["电位叠加", "导体边界"],
+      "related_formulas": ["image_plane_potential", "image_sphere_position"],
+      "common_mistakes": ["忘记说明求解区域", "把镜像电荷当真实电荷"],
+      "exam_usage": ["综合计算题", "边界验证"]
+    },
+    {
+      "id": "electrostatic_energy",
+      "name": "静电能量",
+      "subject_type": "engineering",
+      "chapter": "第一章 静电场",
+      "textbook_section": "静电能量",
+      "definition": "静电场中储存的能量可用能量密度表示。",
+      "plain_explanation": "电场不是只产生力，它也储存能量。",
+      "why_important": "能量密度公式常以填空或选择形式出现。",
+      "prerequisites": ["电场强度", "电位移矢量"],
+      "related_formulas": ["electrostatic_energy_density"],
+      "common_mistakes": ["漏掉系数 1/2"],
+      "exam_usage": ["填空题", "能量积分题"]
+    }
+  ],
+  "formula_db": [
+    {
+      "id": "point_charge_field",
+      "concept_id": "electric_field",
+      "latex": "\\mathbf{E}=\\frac{Q}{4\\pi\\varepsilon_0 R^2}\\hat{\\mathbf{R}}",
+      "display_text": "E = Q/(4πε₀R²) R̂",
+      "symbol_explanation": {"Q": "源点电荷", "R": "源点到场点距离", "ε₀": "真空介电常数"},
+      "conditions": "真空、点电荷、静电情形",
+      "forbidden_alias": ["Q_enc", "sqrtr"],
+      "examples": ["example_point_charge_direction"]
+    },
+    {
+      "id": "point_charge_potential",
+      "concept_id": "potential_gradient",
+      "latex": "\\varphi=\\frac{Q}{4\\pi\\varepsilon_0 R}",
+      "display_text": "φ = Q/(4πε₀R)",
+      "symbol_explanation": {"φ": "电位", "Q": "点电荷", "R": "源点到场点距离"},
+      "conditions": "以无穷远为零电位",
+      "forbidden_alias": ["Q√", "sqrt"],
+      "examples": ["example_image_plane"]
+    },
+    {
+      "id": "gauss_law_integral",
+      "concept_id": "gauss_law",
+      "latex": "\\int_S \\mathbf{D}\\cdot d\\mathbf{S}=Q",
+      "display_text": "∫S D·dS = Q",
+      "symbol_explanation": {"S": "闭合曲面", "D": "电位移矢量", "Q": "包围自由电荷"},
+      "conditions": "闭合曲面；右端为包围自由电荷",
+      "forbidden_alias": ["Q_enc", "Q_enclosed"],
+      "examples": ["example_gauss_sphere"]
+    },
+    {
+      "id": "uniform_sphere_inside",
+      "concept_id": "gauss_law",
+      "latex": "E=\\frac{Qr}{4\\pi\\varepsilon_0 a^3}\\quad(r<a)",
+      "display_text": "E = Qr/(4πε₀a³), r<a",
+      "symbol_explanation": {"a": "带电球体半径", "r": "场点到球心距离"},
+      "conditions": "均匀带电球体内部",
+      "forbidden_alias": ["r^2", "a^2"],
+      "examples": ["example_gauss_sphere"]
+    },
+    {
+      "id": "uniform_sphere_outside",
+      "concept_id": "gauss_law",
+      "latex": "E=\\frac{Q}{4\\pi\\varepsilon_0 r^2}\\quad(r>a)",
+      "display_text": "E = Q/(4πε₀r²), r>a",
+      "symbol_explanation": {"r": "场点到球心距离"},
+      "conditions": "均匀带电球体外部",
+      "forbidden_alias": ["r^2"],
+      "examples": ["example_gauss_sphere"]
+    },
+    {
+      "id": "potential_gradient_formula",
+      "concept_id": "potential_gradient",
+      "latex": "\\mathbf{E}=-\\nabla\\varphi",
+      "display_text": "E = -∇φ",
+      "symbol_explanation": {"∇φ": "电位梯度", "负号": "电场指向电位降低最快方向"},
+      "conditions": "静电场",
+      "forbidden_alias": ["nabla", "phi"],
+      "examples": ["example_potential_gradient"]
+    },
+    {
+      "id": "boundary_tangential_e",
+      "concept_id": "boundary_conditions",
+      "latex": "E_{1t}=E_{2t}",
+      "display_text": "E₁t = E₂t",
+      "symbol_explanation": {"t": "切向分量"},
+      "conditions": "静电场介质分界面",
+      "forbidden_alias": ["E1t", "E2t"],
+      "examples": ["example_boundary_condition"]
+    },
+    {
+      "id": "boundary_normal_d",
+      "concept_id": "boundary_conditions",
+      "latex": "D_{1n}-D_{2n}=\\rho_s",
+      "display_text": "D₁n - D₂n = ρₛ",
+      "symbol_explanation": {"n": "法向分量", "ρₛ": "自由面电荷密度"},
+      "conditions": "分界面存在自由面电荷",
+      "forbidden_alias": ["D1n", "D2n", "rho_s"],
+      "examples": ["example_boundary_condition"]
+    },
+    {
+      "id": "image_plane_potential",
+      "concept_id": "image_method",
+      "latex": "\\varphi=\\frac{1}{4\\pi\\varepsilon_0}\\left(\\frac{Q}{\\sqrt{x^2+y^2+(z-h)^2}}-\\frac{Q}{\\sqrt{x^2+y^2+(z+h)^2}}\\right)",
+      "display_text": "φ = 1/(4πε₀)[Q/R₁ - Q/R₂]",
+      "symbol_explanation": {"Q": "原电荷", "h": "原电荷到接地平面的距离", "z>0": "求解区域"},
+      "conditions": "接地无限大导体平面；只适用于 z>0 区域",
+      "forbidden_alias": ["Q√", "sqrt"],
+      "examples": ["example_image_plane"]
+    },
+    {
+      "id": "image_sphere_position",
+      "concept_id": "image_method",
+      "latex": "b=\\frac{a^2}{d}",
+      "display_text": "b = a²/d",
+      "symbol_explanation": {"a": "导体球半径", "d": "源电荷到球心距离", "b": "镜像电荷到球心距离"},
+      "conditions": "接地导体球外点电荷问题",
+      "forbidden_alias": ["(a)/(D)", "a^2"],
+      "examples": ["example_image_sphere"]
+    },
+    {
+      "id": "electrostatic_energy_density",
+      "concept_id": "electrostatic_energy",
+      "latex": "w_e=\\frac{1}{2}\\mathbf{D}\\cdot\\mathbf{E}",
+      "display_text": "we = 1/2 D·E",
+      "symbol_explanation": {"we": "静电能量密度"},
+      "conditions": "线性介质常用形式",
+      "forbidden_alias": ["(1)/(2)", "frac"],
+      "examples": []
+    }
+  ],
+  "example_db": [
+    {
+      "id": "example_gauss_sphere",
+      "source_type": "textbook_example",
+      "source_ref": "教材第一章高斯定理例题",
+      "concept_ids": ["gauss_law"],
+      "question_type": "calculation",
+      "difficulty": 0.72,
+      "question": "半径为 a 的均匀带电球体，总电荷为 Q，求球内和球外电场强度。",
+      "diagram_required": true,
+      "diagram_type": "gauss_sphere",
+      "solution_steps": ["选取同心球面作为高斯面", "球内按体积比例计算包围电荷", "球外包围全部电荷", "由 D=ε₀E 得到场强"],
+      "answer": "球内 E=Qr/(4πε₀a³)，球外 E=Q/(4πε₀r²)。",
+      "common_mistakes": ["球内包围电荷写成 Q", "忘记分段条件"],
+      "variants": ["均匀带电球壳内部电场判断", "无限长线电荷圆柱高斯面"]
+    },
+    {
+      "id": "example_potential_gradient",
+      "source_type": "local_similar",
+      "source_ref": "本地同类题池",
+      "concept_ids": ["potential_gradient"],
+      "question_type": "calculation",
+      "difficulty": 0.55,
+      "question": "已知 φ(x,y,z)=Ax²+Byz，求电场强度分量。",
+      "diagram_required": true,
+      "diagram_type": "potential_field",
+      "solution_steps": ["写出 E=-∇φ", "分别对 x、y、z 求偏导", "每个分量加负号"],
+      "answer": "Ex=-2Ax，Ey=-Bz，Ez=-By。",
+      "common_mistakes": ["漏掉负号"],
+      "variants": ["给定电位差求路径积分"]
+    },
+    {
+      "id": "example_boundary_condition",
+      "source_type": "past_paper",
+      "source_ref": "上传真题 OCR 可确认考点",
+      "concept_ids": ["boundary_conditions"],
+      "question_type": "blank",
+      "difficulty": 0.62,
+      "question": "两种介质分界面存在自由面电荷密度 ρₛ，写出切向 E 和法向 D 的边界条件。",
+      "diagram_required": true,
+      "diagram_type": "boundary",
+      "solution_steps": ["切向来自静电环路积分", "法向来自薄柱高斯面", "写出跳变项"],
+      "answer": "E₁t=E₂t，D₁n-D₂n=ρₛ。",
+      "common_mistakes": ["把法向 E 写成连续"],
+      "variants": ["无自由面电荷时 D₁n=D₂n"]
+    },
+    {
+      "id": "example_image_plane",
+      "source_type": "local_similar",
+      "source_ref": "本地同类题池",
+      "concept_ids": ["image_method"],
+      "question_type": "calculation",
+      "difficulty": 0.82,
+      "question": "接地无限大导体平面 z=0 上方 z=h 处有点电荷 Q，求 z>0 区域电位。",
+      "diagram_required": true,
+      "diagram_type": "image_plane",
+      "solution_steps": ["放置镜像电荷 Q'=-Q 于 z=-h", "写两个点电荷电位叠加", "验证 z=0 边界电位为零", "说明只适用于 z>0"],
+      "answer": "φ=1/(4πε₀)[Q/R₁-Q/R₂]，且只适用于 z>0。",
+      "common_mistakes": ["忘记说明镜像电荷不是真实电荷", "忘记求解区域"],
+      "variants": ["接地导体球镜像电荷位置 b=a²/d"]
+    },
+    {
+      "id": "example_energy_density",
+      "source_type": "local_similar",
+      "source_ref": "本地同类题池",
+      "concept_ids": ["electrostatic_energy"],
+      "question_type": "choice",
+      "difficulty": 0.45,
+      "question": "写出静电能量密度常用表达式。",
+      "diagram_required": false,
+      "diagram_type": "",
+      "solution_steps": ["识别能量密度", "注意系数 1/2"],
+      "answer": "we=1/2 D·E。",
+      "common_mistakes": ["漏掉 1/2"],
+      "variants": ["均匀介质中 we=1/2 εE²"]
+    }
+  ],
+  "exam_pattern_db": [
+    {
+      "id": "pattern_gauss_sphere",
+      "source_ref": "上传真题 OCR / 教材例题",
+      "concept_ids": ["gauss_law"],
+      "question_type": "calculation",
+      "score": 15,
+      "difficulty": 0.75,
+      "teacher_style": "要求写高斯面、包围电荷、分段条件",
+      "common_traps": ["球内包围电荷写成 Q", "漏写 r<a/r>a"],
+      "chapter_scope": "第一章 静电场"
+    },
+    {
+      "id": "pattern_image_charge_plane",
+      "source_ref": "上传真题 OCR / 本地同类题池",
+      "concept_ids": ["image_method"],
+      "question_type": "calculation",
+      "score": 15,
+      "difficulty": 0.8,
+      "teacher_style": "要求写镜像电荷、求解区域、边界验证",
+      "common_traps": ["忘记说明 z>0", "把镜像电荷当真实电荷"],
+      "chapter_scope": "第一章 静电场"
+    },
+    {
+      "id": "pattern_boundary_condition",
+      "source_ref": "上传真题 OCR 可确认考点",
+      "concept_ids": ["boundary_conditions"],
+      "question_type": "blank",
+      "score": 6,
+      "difficulty": 0.6,
+      "teacher_style": "考查切向 E 与法向 D 的区分",
+      "common_traps": ["把 Eₙ 写成连续", "漏掉 ρₛ"],
+      "chapter_scope": "第一章 静电场"
+    }
+  ],
+  "diagram_db": [
+    {
+      "id": "diagram_gauss_sphere",
+      "diagram_type": "gauss_sphere",
+      "linked_concept_ids": ["gauss_law"],
+      "required_labels": ["a", "r", "r<a", "r>a", "D", "dS", "Q"],
+      "render_method": "programmatic_png",
+      "path": "assets/generated/rc2_examples/gauss_ball.png",
+      "description": "球形高斯面、包围电荷和电场方向。",
+      "valid_for_question_types": ["calculation"]
+    },
+    {
+      "id": "diagram_potential_field",
+      "diagram_type": "potential_field",
+      "linked_concept_ids": ["potential_gradient"],
+      "required_labels": ["等位线", "电场线", "E=-∇φ"],
+      "render_method": "programmatic_png",
+      "path": "assets/generated/rc2_examples/potential_ab.png",
+      "description": "等位线与电场线关系。",
+      "valid_for_question_types": ["calculation", "choice"]
+    },
+    {
+      "id": "diagram_boundary",
+      "diagram_type": "boundary",
+      "linked_concept_ids": ["boundary_conditions"],
+      "required_labels": ["介质1", "介质2", "n", "t", "Eₜ", "Dₙ"],
+      "render_method": "programmatic_png",
+      "path": "assets/generated/selfcheck_boundary.png",
+      "description": "介质分界面的切向和法向分量。",
+      "valid_for_question_types": ["blank", "calculation"]
+    },
+    {
+      "id": "diagram_image_plane",
+      "diagram_type": "image_plane",
+      "linked_concept_ids": ["image_method"],
+      "required_labels": ["导体边界", "Q", "Q'", "求解区域", "P"],
+      "render_method": "programmatic_png",
+      "path": "assets/generated/rc2_examples/image_sphere_q.png",
+      "description": "镜像法的源电荷、镜像电荷和求解区域。",
+      "valid_for_question_types": ["calculation"]
+    }
+  ]
+}

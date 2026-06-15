@@ -1,0 +1,8 @@
+<article class="concept-card">
+  <h3>{{ concept.name }}</h3>
+  <p><strong>教材表述：</strong>{{ concept.definition }}</p>
+  <p><strong>老师讲法：</strong>{{ concept.plain_explanation }} {{ concept.why_important }}</p>
+  <p><strong>考试考法：</strong>{{ concept.exam_usage | join("；") }}</p>
+  <p><strong>易错点：</strong>{{ concept.common_mistakes | join("；") }}</p>
+  <p><strong>考前提醒：</strong>{{ concept.exam_reminder }}</p>
+</article>

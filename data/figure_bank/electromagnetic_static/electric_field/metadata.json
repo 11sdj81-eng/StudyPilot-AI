@@ -1,0 +1,18 @@
+{
+  "prog_electric_field_9": {
+    "source_type": "programmatic",
+    "source_file": "point_charge_field_teaching.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "electric_field",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "point charge field teaching",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/electric_field/images/point_charge_field_teaching.svg",
+    "created_at": "2026-06-14T15:02:38.106762+00:00"
+  }
+}

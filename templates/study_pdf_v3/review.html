@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>章节复习讲义</h1>
+  <p class="subtitle">教材对齐 · 老师讲法 · 考试导向 · GoodNotes 友好</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>任务</strong><br>Review PDF · 章节复习</div>
+    <div class="meta-item"><strong>章节</strong><br>第一章 静电场</div>
+    <div class="meta-item"><strong>生成日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+<section class="toc">
+  <h2>目录</h2>
+  <ol class="toc-list">{% for item in toc %}<li><span>{{ item }}</span><span></span></li>{% endfor %}</ol>
+</section>
+
+<section class="section">
+  <h2>知识地图</h2>
+  <div class="card">
+    <p>本章先用电场强度建立“场”的概念，再用高斯定理处理高对称电荷分布；随后用电位把矢量问题转为标量问题，用边界条件连接不同介质，最后用镜像法和静电能量解决综合题。</p>
+    <p><strong>主线：</strong>电场强度 → 高斯定理 → 电位关系 → 边界条件 → 镜像法 → 静电能量。</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>核心知识精讲</h2>
+  {% for concept in concepts %}
+    {% include "components/concept_card.html" %}
+    {% if concept.diagram %}{% set diagram = concept.diagram %}{% include "components/diagram_block.html" %}{% endif %}
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>公式总结表</h2>
+  {% for formula in formulas %}{% include "components/formula_card.html" %}{% endfor %}
+</section>
+
+<section class="section">
+  <h2>典型例题</h2>
+  {% for example in examples %}{% include "components/example_card.html" %}{% endfor %}
+</section>
+
+<section class="section">
+  <h2>高频考点与易错点</h2>
+  {% for pattern in patterns %}
+  <article class="mistake-card">
+    <h3>{{ pattern.display_name }}</h3>
+    <p><strong>怎么考：</strong>{{ pattern.how_tested }}</p>
+    <p><strong>扣分陷阱：</strong>{{ pattern.trap }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>自测题</h2>
+  {% for q in self_tests %}
+  <article class="card">
+    <h3>{{ loop.index }}. {{ q.question }}</h3>
+    <p><strong>答案：</strong>{{ q.answer }}</p>
+    <p><strong>解析：</strong>{{ q.analysis }}</p>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>下一步复习建议</h2>
+  <ul>
+    <li>把高斯定理和边界条件各做 2 道完整计算题。</li>
+    <li>把镜像法题目统一写出“镜像位置、等效电位、边界验证”。</li>
+    <li>考前只回看公式总结表、易错点和自测题。</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

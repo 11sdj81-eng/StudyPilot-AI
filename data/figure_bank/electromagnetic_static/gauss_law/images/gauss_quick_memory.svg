@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">高斯定理速记图</text>
+
+<circle cx="430" cy="245" r="115" class="soft"/><circle cx="430" cy="245" r="14" fill="#C56C6C"/>
+<path d="M430 130 L430 75" class="line" marker-end="url(#arrow)"/><path d="M545 245 L610 245" class="line" marker-end="url(#arrow)"/>
+<path d="M430 360 L430 420" class="line" marker-end="url(#arrow)"/><path d="M315 245 L250 245" class="line" marker-end="url(#arrow)"/>
+<text x="392" y="251" class="m">Q</text><text x="560" y="232" class="m">E</text><text x="460" y="322" class="m">闭合 S</text>
+<rect x="80" y="370" width="260" height="72" rx="14" class="warn"/><text x="105" y="400" class="l">三步：看对称性</text><text x="105" y="426" class="s">选闭合面 → 算包围电荷</text>
+<rect x="600" y="370" width="240" height="72" rx="14" class="soft"/><text x="625" y="413" class="m">∫S D·dS = Q</text>
+
+</svg>

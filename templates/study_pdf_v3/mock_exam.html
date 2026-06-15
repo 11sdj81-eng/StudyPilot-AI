@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover compact">
+  <div class="brand">StudyPilot AI</div>
+  <h1>电磁场与电磁波<br>第一章静电场模拟试卷</h1>
+  <p class="subtitle">90 分钟 · 100 分 · 覆盖核心考点</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>选择题</strong><br>5 道 × 4 分 = 20 分</div>
+    <div class="meta-item"><strong>填空题</strong><br>5 道 × 4 分 = 20 分</div>
+    <div class="meta-item"><strong>简答题</strong><br>2 道 × 10 分 = 20 分</div>
+    <div class="meta-item"><strong>计算/综合题</strong><br>2 道 × 20 分 = 40 分</div>
+  </div>
+</section>
+
+<section class="exam-paper section">
+  <h2>一、选择题</h2>
+  {% for q in sections.choice %}<div class="question"><strong>{{ q.no }}.</strong> {{ q.question }} <span class="small-muted">（{{ q.points }} 分）</span><ol type="A">{% for opt in q.options %}<li>{{ opt }}</li>{% endfor %}</ol></div>{% endfor %}
+  <h2>二、填空题</h2>
+  {% for q in sections.fill %}<div class="question"><strong>{{ q.no }}.</strong> {{ q.question }} <span class="small-muted">（{{ q.points }} 分）</span></div>{% endfor %}
+  <h2>三、简答题</h2>
+  {% for q in sections.short %}<div class="question"><strong>{{ q.no }}.</strong> {{ q.question }} <span class="small-muted">（{{ q.points }} 分）</span>{% if q.diagram %}{% set diagram = q.diagram %}{% include "components/diagram_block.html" %}{% endif %}</div>{% endfor %}
+  <h2>四、计算与综合题</h2>
+  {% for q in sections.calc %}<div class="question"><strong>{{ q.no }}.</strong> {{ q.question }} <span class="small-muted">（{{ q.points }} 分）</span>{% if q.diagram %}{% set diagram = q.diagram %}{% include "components/diagram_block.html" %}{% endif %}</div>{% endfor %}
+</section>
+
+<section class="answer-section">
+  <h2>参考答案与评分标准</h2>
+  {% for q in answers %}
+  <article class="card">
+    <h3>{{ q.no }}. {{ q.answer }}</h3>
+    <p><strong>解析：</strong>{{ q.analysis }}</p>
+    <p><strong>评分标准：</strong>{{ q.rubric | join("；") }}</p>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

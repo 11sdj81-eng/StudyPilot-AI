@@ -1,0 +1,5 @@
+<div class="exam-question">
+  <strong>{{ q.no }}.</strong> {{ q.question }} <span class="small-muted">（{{ q.points }} 分）</span>
+  {% if q.options %}<ol type="A">{% for opt in q.options %}<li>{{ opt }}</li>{% endfor %}</ol>{% endif %}
+  {% set diagram = q.diagram %}{% include "components/diagram_block.html" %}
+</div>

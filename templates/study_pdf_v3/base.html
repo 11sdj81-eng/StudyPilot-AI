@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 17mm 15mm 18mm;
+      @top-center { content: "StudyPilot AI · {{ course_name }}"; font-size: 9pt; color: #64748b; }
+      @bottom-center { content: counter(page); font-size: 9pt; color: #64748b; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fffaf0;
+      color: #1f2937;
+      font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.62;
+    }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.25; color: #111827; break-after: avoid; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 21px; border-left: 5px solid #2563eb; padding-left: 10px; margin-top: 26px; }
+    h3 { font-size: 16px; margin-top: 14px; color: #334155; }
+    p { margin: 5px 0 8px; }
+    ul, ol { margin: 6px 0 10px 20px; padding: 0; }
+    li { margin: 3px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; background: #fff; break-inside: avoid; }
+    th, td { border: 1px solid #d6d3d1; padding: 8px 9px; vertical-align: top; }
+    th { background: #eff6ff; color: #1e3a8a; }
+    .cover { min-height: 235mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+    .brand { font-size: 18px; color: #2563eb; font-weight: 800; letter-spacing: .02em; }
+    .cover h1 { font-size: 38px; margin: 14px 0 10px; }
+    .subtitle { font-size: 19px; color: #475569; }
+    .meta-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 24px; }
+    .meta-item { background: #ffffff; border: 1px solid #e7e5e4; border-radius: 12px; padding: 10px 12px; }
+    .toc { page-break-after: always; }
+    .toc-list { list-style: none; margin: 0; padding: 0; }
+    .toc-list li { display: flex; justify-content: space-between; border-bottom: 1px dotted #cbd5e1; padding: 5px 0; }
+    .section { break-before: auto; }
+    .card, .concept-card, .example-card, .formula-card, .diagram-block, .source-card {
+      background: rgba(255,255,255,.92);
+      border: 1px solid #e7e5e4;
+      border-radius: 14px;
+      padding: 13px 15px;
+      margin: 10px 0 14px;
+      break-inside: avoid;
+      box-shadow: 0 1px 0 rgba(15,23,42,.04);
+    }
+    .concept-card { border-left: 5px solid #2563eb; }
+    .example-card { border-left: 5px solid #0ea5e9; background: #f8fbff; }
+    .formula-card { border-left: 5px solid #7c3aed; background: #fbf7ff; }
+    .mistake-card { border-left: 5px solid #f97316; background: #fff7ed; }
+    .sprint-card { border-left: 5px solid #eab308; background: #fffbea; }
+    .quality-badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; background: #dcfce7; color: #166534; font-weight: 700; }
+    .tag { display: inline-block; padding: 2px 7px; border-radius: 999px; background: #e0f2fe; color: #075985; font-size: 11px; margin-right: 4px; }
+    .formula-line { font-family: Georgia, "Times New Roman", serif; font-size: 17px; text-align: center; padding: 8px; background: #fff; border-radius: 10px; border: 1px solid #ddd6fe; }
+    .formula-no { float: right; color: #475569; font-size: 12px; }
+    .mjx-formula { display: none; }
+    .diagram-block img { width: 100%; max-height: 315px; object-fit: contain; display: block; margin: 4px auto 8px; }
+    .figure-title { font-weight: 800; color: #1e40af; margin-bottom: 6px; }
+    .caption { color: #475569; font-size: 12px; }
+    .why { background: #f1f5f9; border-radius: 9px; padding: 7px 9px; margin-top: 6px; color: #334155; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .steps { counter-reset: step; list-style: none; margin-left: 0; }
+    .steps li { counter-increment: step; padding-left: 28px; position: relative; margin: 6px 0; }
+    .steps li::before { content: counter(step); position: absolute; left: 0; top: 1px; width: 19px; height: 19px; border-radius: 50%; background: #2563eb; color: #fff; text-align: center; font-size: 11px; line-height: 19px; }
+    .exam-paper .question { margin-bottom: 12px; break-inside: avoid; }
+    .answer-section { page-break-before: always; }
+    .source-card { border-left: 5px solid #94a3b8; }
+    .small-muted { color: #64748b; font-size: 12px; }
+    .page-break { page-break-before: always; }
+    .compact h2 { margin-top: 18px; }
+    .no-break { break-inside: avoid; }
+    @media print {
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], tags: 'none' },
+      svg: { fontCache: 'none' },
+      startup: { pageReady: () => MathJax.startup.defaultPageReady().then(async () => {
+        const nodes = Array.from(document.querySelectorAll('.formula-line[data-tex]'));
+        for (const node of nodes) {
+          try {
+            const svg = await MathJax.tex2svgPromise(node.dataset.tex, {display: true});
+            svg.setAttribute('aria-label', node.textContent.trim());
+            node.innerHTML = '';
+            node.appendChild(svg);
+            node.classList.add('mathjax-rendered');
+          } catch (error) {
+            node.classList.add('mathjax-fallback');
+          }
+        }
+        document.body.classList.add('math-ready');
+      }) }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body class="{{ body_class|default('') }}">
+  {% block body %}{% endblock %}
+</body>
+</html>

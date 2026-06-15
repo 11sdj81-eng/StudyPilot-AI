@@ -1,0 +1,18 @@
+{
+  "prog_electrostatic_energy_2": {
+    "source_type": "programmatic",
+    "source_file": "electrostatic_energy_memory.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "electrostatic_energy",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "electrostatic energy memory",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/electrostatic_energy/images/electrostatic_energy_memory.svg",
+    "created_at": "2026-06-14T15:02:38.105716+00:00"
+  }
+}

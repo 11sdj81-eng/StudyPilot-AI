@@ -1,0 +1,7 @@
+<section class="toc-sheet">
+  <h2>目录与使用建议</h2>
+  <div class="toc-grid">
+    <ol class="toc-list">{% for item in toc %}<li><span>{{ item }}</span><span></span></li>{% endfor %}</ol>
+    {% include "components/reading_path.html" %}
+  </div>
+</section>

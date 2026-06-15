@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover compact">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>真题精讲</h1>
+  <p class="subtitle">按“审题、建模、公式选择、扣分点、变式”复盘</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>任务</strong><br>Past Paper PDF · 真题精讲</div>
+    <div class="meta-item"><strong>题源</strong><br>往年题可确认考点 + 教材例题改编</div>
+    <div class="meta-item"><strong>生成日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+<section class="toc">
+  <h2>目录</h2>
+  <ol class="toc-list">{% for case in cases %}<li><span>案例 {{ loop.index }}：{{ case.display_name }}</span><span>{{ case.difficulty }}</span></li>{% endfor %}</ol>
+</section>
+
+{% for case in cases %}
+<section class="section">
+  <h2>案例 {{ loop.index }}：{{ case.display_name }}</h2>
+  <p><span class="tag">{{ case.difficulty }}</span><span class="tag">{{ case.exam_focus }}</span></p>
+  <p><strong>题目：</strong>{{ case.question }}</p>
+  {% if case.diagram %}{% set diagram = case.diagram %}{% include "components/diagram_block.html" %}{% endif %}
+  <div class="two-col">
+    <div class="card">
+      <h3>审题与建模</h3>
+      <ul><li>识别题型：{{ case.exam_focus }}</li><li>教材位置：{{ case.source_location }}</li><li>模型入口：{{ case.modeling }}</li></ul>
+    </div>
+    <div class="card">
+      <h3>公式选择</h3>
+      <p>{{ case.formula_text }}</p>
+    </div>
+  </div>
+  <h3>解题步骤</h3>
+  {% set steps = case.solution_steps %}{% include "components/solution_steps.html" %}
+  <p><strong>标准答案：</strong>{{ case.answer }}</p>
+  <p><strong>评分扣分点：</strong>{{ case.rubric | join("；") }}</p>
+  <p><strong>易错提醒：</strong>{{ case.common_mistakes | join("；") }}</p>
+  <p><strong>变式题：</strong>{{ case.variants | join("；") }}</p>
+</section>
+{% endfor %}
+
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

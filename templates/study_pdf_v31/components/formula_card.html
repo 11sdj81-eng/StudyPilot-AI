@@ -1,0 +1,5 @@
+<article class="formula-card">
+  <strong>{{ formula.display_name }}</strong><span class="formula-no">({{ formula.number }})</span>
+  <div class="formula-line" data-tex="{{ formula.latex | e }}">{{ formula.display_text }}</div>
+  <p><strong>适用：</strong>{{ formula.conditions }}　<strong>考法：</strong>{{ formula.user_visible_text }}</p>
+</article>

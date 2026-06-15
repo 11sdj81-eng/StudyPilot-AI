@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-06-15T08:07:28.136398+00:00",
+  "total_figures": 399,
+  "precise_crop_count": 3,
+  "scanned_page_count": 385,
+  "programmatic_count": 11,
+  "usable_for_pdf_count": 11,
+  "has_high_quality_crop": true,
+  "current_fallback_reason": "DocLayout-YOLO weights unavailable; no automatic figure cropping",
+  "recommendation": "Continue using v4.1 programmatic SVGs for PDF figures. Real source figures require manual cropping or DocLayout-YOLO fix."
+}

@@ -1,0 +1,430 @@
+@page {
+  size: A4;
+  margin: 14mm 13mm 16mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f5efe2;
+}
+
+body {
+  color: #24211d;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.68;
+  margin: 0;
+}
+
+.cover,
+.toc,
+.references {
+  break-after: page;
+  min-height: 255mm;
+}
+
+.cover {
+  background: #fffaf0;
+  padding: 22mm 12mm 12mm;
+}
+
+.cover-rule {
+  background: linear-gradient(90deg, #265f82, #5c9b69, #d5a339);
+  border-radius: 99px;
+  height: 5px;
+  width: 78mm;
+}
+
+.brand {
+  color: #233c50;
+  font-size: 31px;
+  font-weight: 900;
+  margin-top: 24mm;
+}
+
+.subtitle,
+.eyebrow {
+  color: #9a7b46;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 4mm 0 0;
+}
+
+.cover h1 {
+  color: #213849;
+  font-size: 42px;
+  line-height: 1.12;
+  margin: 22mm 0 4mm;
+}
+
+.chapter {
+  color: #584b3d;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8mm;
+}
+
+.cover-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.cover-meta span {
+  background: #ffffff;
+  border: 1px solid #ead9bb;
+  border-radius: 999px;
+  color: #655744;
+  padding: 5px 13px;
+}
+
+.cover-goals {
+  background: #ffffff;
+  border: 1px solid #ead9bb;
+  border-radius: 14px;
+  box-shadow: 0 12px 26px rgba(91, 72, 43, 0.1);
+  margin-top: 18mm;
+  padding: 9mm 10mm;
+}
+
+.cover-goals h2 {
+  color: #2b6486;
+  font-size: 19px;
+  margin: 0 0 5mm;
+}
+
+.cover-goals li {
+  margin: 2.5mm 0;
+}
+
+.style-note {
+  color: #8c7a61;
+  font-size: 11px;
+  margin-top: 12mm;
+}
+
+.toc,
+.references {
+  break-before: page;
+  background: #fffaf0;
+  padding: 10mm 8mm;
+}
+
+.toc h1,
+.references h1 {
+  color: #263c4d;
+  font-size: 30px;
+  margin: 3mm 0 8mm;
+}
+
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li {
+  align-items: baseline;
+  border-bottom: 1px dashed #dfcda9;
+  display: flex;
+  gap: 8mm;
+  padding: 2.2mm 0;
+}
+
+.toc li span {
+  color: #2f6f8f;
+  font-weight: 900;
+  min-width: 14mm;
+}
+
+.toc li em {
+  color: #352f28;
+  font-style: normal;
+}
+
+.toc-level-2 {
+  font-size: 11px;
+  padding-left: 9mm !important;
+}
+
+.toc-level-2 span {
+  color: #aa946e;
+}
+
+.lecture-section {
+  background: #fffdf8;
+  border: 1px solid #ead9bd;
+  border-left: 6px solid #416f8e;
+  border-radius: 10px;
+  break-inside: auto;
+  margin: 0 0 7mm;
+  padding: 6mm 7mm;
+}
+
+.section-index {
+  color: #b18d52;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.lecture-section > h1 {
+  border-bottom: 2px solid #ead9bd;
+  color: #263c4d;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 1mm 0 5mm;
+  padding-bottom: 2.5mm;
+}
+
+.section-body h2 {
+  break-after: avoid;
+  color: #315a73;
+  font-size: 18px;
+  margin: 5mm 0 2mm;
+}
+
+.section-body h3 {
+  break-after: avoid;
+  color: #5a4e41;
+  font-size: 15px;
+  margin: 3.5mm 0 1.5mm;
+}
+
+.section-body p {
+  margin: 2mm 0 3mm;
+}
+
+.section-body ul,
+.section-body ol {
+  margin: 2mm 0 3mm;
+  padding-left: 7mm;
+}
+
+.section-core { border-left-color: #476f9e; }
+.section-formulas { background: #fbf8ff; border-left-color: #8062b5; }
+.section-examples { background: #f2f8ff; border-left-color: #357fb8; }
+.section-hotspots { background: #f2fbf4; border-left-color: #4f9d67; }
+.section-memory { background: #fff9df; border-left-color: #d3a135; }
+.section-self_test { border-left-color: #5c8d89; }
+
+.knowledge-card,
+.example-card {
+  background: #ffffff;
+  border: 1px solid #d9e3ed;
+  border-radius: 10px;
+  margin: 5mm 0;
+  padding: 5mm 6mm;
+}
+
+.example-card {
+  break-inside: avoid;
+}
+
+.knowledge-card h2,
+.example-card h2 {
+  margin-top: 0;
+}
+
+.example-card {
+  border-color: #b9d5ed;
+  border-left: 5px solid #357fb8;
+  box-shadow: 0 6px 16px rgba(44, 90, 125, 0.08);
+}
+
+.callout {
+  border-radius: 8px;
+  break-inside: avoid;
+  margin: 3mm 0;
+  padding: 3mm 4mm;
+}
+
+.callout-danger {
+  background: #fff2ea;
+  border-left: 5px solid #dc6f45;
+}
+
+.callout-exam {
+  background: #edf8f0;
+  border-left: 5px solid #55a36b;
+}
+
+.callout-template {
+  background: #fff7d7;
+  border-left: 5px solid #d2a23a;
+}
+
+.math-inline-text {
+  color: #1f2730;
+  font-family: "Times New Roman", "STIX Two Text", "PingFang SC", serif;
+  font-size: 1.04em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.math-inline {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: -0.18em;
+}
+
+.math-inline mjx-container {
+  display: inline-block !important;
+  margin: 0 1px !important;
+  max-width: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.example-inline-figure {
+  margin: 3mm auto 4mm;
+}
+
+.math-display-card {
+  background: #fbf8ff;
+  border: 1px solid #d9caef;
+  border-left: 5px solid #8062b5;
+  border-radius: 10px;
+  break-inside: avoid;
+  margin: 4mm 0;
+  overflow: hidden;
+  padding: 3mm 5mm;
+}
+
+.math-display {
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.math-display mjx-container {
+  margin: 0 !important;
+  min-width: 0 !important;
+}
+
+.summary-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  break-inside: avoid;
+  font-size: 11px;
+  margin: 4mm 0;
+  width: 100%;
+}
+
+.summary-table th,
+.summary-table td {
+  border-bottom: 1px solid #ddd0b8;
+  padding: 2.5mm;
+  text-align: left;
+  vertical-align: top;
+}
+
+.summary-table th {
+  background: #eadfc9;
+  color: #312c25;
+  font-weight: 900;
+}
+
+.summary-table tr:nth-child(even) td {
+  background: rgba(255, 250, 240, 0.8);
+}
+
+.teaching-figure {
+  background: #ffffff;
+  border: 1px solid #dfcfb4;
+  border-radius: 10px;
+  break-inside: avoid;
+  margin: 5mm auto;
+  max-width: 158mm;
+  padding: 4mm;
+  text-align: center;
+}
+
+.teaching-figure img {
+  display: block;
+  margin: 0 auto 3mm;
+  max-height: 78mm;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.teaching-figure figcaption {
+  color: #4c4338;
+  font-size: 11px;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.teaching-figure figcaption span {
+  color: #806a48;
+}
+
+.section-examples .teaching-figure {
+  border-color: #bdd6ec;
+  max-width: 148mm;
+}
+
+.task-exam_sprint .cover,
+.task-exam_sprint .toc,
+.task-exam_sprint .references {
+  min-height: 235mm;
+}
+
+.task-mock_exam .lecture-section,
+.task-past_paper .lecture-section {
+  background: #ffffff;
+  border-left-color: #222222;
+}
+
+.ref-intro {
+  color: #5f5345;
+  margin-bottom: 6mm;
+}
+
+.source-card {
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #e2d0b2;
+  border-radius: 10px;
+  break-inside: avoid;
+  display: grid;
+  gap: 5mm;
+  grid-template-columns: 20mm 1fr;
+  margin: 4mm 0;
+  padding: 4mm 5mm;
+}
+
+.source-ref {
+  background: #2f6f8f;
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 2mm 0;
+  text-align: center;
+}
+
+.source-card h2 {
+  color: #263c4d;
+  font-size: 15px;
+  margin: 0 0 1.5mm;
+}
+
+.source-card p {
+  color: #5c5145;
+  margin: 1mm 0;
+}
+
+@media print {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .example-card,
+  .math-display-card,
+  .teaching-figure,
+  .source-card {
+    page-break-inside: avoid;
+  }
+}

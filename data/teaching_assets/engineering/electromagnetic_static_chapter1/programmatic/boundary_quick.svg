@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5f7f5b"/></marker>
+<style>
+.t{font:700 25px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.l{font:600 18px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#333}
+.s{font:500 15px 'Noto Sans CJK SC','PingFang SC',Arial,sans-serif;fill:#6F6F6F}
+.m{font:600 18px Georgia,'Times New Roman',serif;fill:#333}
+.line{stroke:#5f7f5b;stroke-width:3;fill:none}
+.thin{stroke:#7FA87A;stroke-width:2;fill:none}
+.dash{stroke-dasharray:8 7}
+.paper{fill:#FFFDF8;stroke:#E6E0D6;stroke-width:2}
+.soft{fill:#EEF5EA;stroke:#A7C4A0;stroke-width:2}
+.warn{fill:#FFF9EE;stroke:#D6A85C;stroke-width:2}
+</style>
+</defs>
+<rect width="920" height="500" fill="#FFFDF8"/>
+<text x="42" y="46" class="t">边界条件口诀图</text>
+
+<line x1="90" y1="250" x2="830" y2="250" stroke="#7FA87A" stroke-width="4"/><text x="100" y="180" class="l">介质 1</text><text x="100" y="335" class="l">介质 2</text>
+<line x1="250" y1="210" x2="650" y2="210" class="line" marker-end="url(#arrow)"/><text x="680" y="216" class="m">Et 连续</text>
+<line x1="430" y1="365" x2="430" y2="135" class="line" marker-end="url(#arrow)"/><text x="455" y="250" class="m">Dn 看 ρs</text>
+<rect x="255" y="400" width="390" height="54" rx="14" class="warn"/><text x="280" y="434" class="l">口诀：切向看 E，法向看 D</text>
+
+</svg>

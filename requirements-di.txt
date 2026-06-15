@@ -1,0 +1,12 @@
+# Optional Document Intelligence dependencies for StudyPilot v5.
+# Install only when you want to enable heavy document parsing adapters.
+#
+# MinerU: follow upstream install instructions; package names may vary by release.
+# marker-pdf
+# paddleocr
+# ultralytics
+python-pptx>=1.0.0
+opencv-python>=4.9.0
+pillow>=10.3.0
+numpy>=1.26.0
+PyMuPDF>=1.24.0

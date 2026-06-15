@@ -1,0 +1,8 @@
+[
+  {"concept_id": "electric_field", "teacher_strategy": "先把电场讲成“单位正试探电荷受到的力”，再强调它是空间每一点都有方向的矢量场。", "blackboard_sequence": ["定义", "方向", "点电荷公式", "叠加思想"], "exam_tip": "选择题常考方向，计算题常考矢量叠加。", "five_min_review": "记住场强不是力，方向按正试探电荷受力方向定义。"},
+  {"concept_id": "gauss_law", "teacher_strategy": "先问“场在面上是否处处一样”，再决定能否用高斯定理快速求解。", "blackboard_sequence": ["判断对称性", "选高斯面", "算包围电荷", "列通量方程", "分区域写答案"], "exam_tip": "球、柱、面对称是高斯定理的高频入口。", "five_min_review": "不会选高斯面时，先看电荷分布是否球对称、柱对称或平面对称。"},
+  {"concept_id": "potential_gradient", "teacher_strategy": "用地形高度类比电位，电场方向就是下坡最快的方向。", "blackboard_sequence": ["电位差", "负梯度", "等位线", "由 V 求 E"], "exam_tip": "填空题常挖负号陷阱。", "five_min_review": "等位线越密，场越强；电场线垂直等位线。"},
+  {"concept_id": "boundary_conditions", "teacher_strategy": "把场量拆成切向和法向两部分，分别记忆，不混用。", "blackboard_sequence": ["分界面", "切向 E", "法向 D", "自由面电荷", "导体特例"], "exam_tip": "简答题和计算题都喜欢让学生说明连续与跳变。", "five_min_review": "切向看 E，法向看 D；有自由面电荷时 D 法向跳变。"},
+  {"concept_id": "image_method", "teacher_strategy": "把镜像法讲成“找一个等效电荷系统，专门满足边界条件”。", "blackboard_sequence": ["边界条件", "镜像位置", "等效电位", "验证边界", "只在求解区域有效"], "exam_tip": "综合题常要求写出镜像电荷和适用区域。", "five_min_review": "接地平面镜像电荷异号、对称；不要把镜像电荷当成真实区域电荷。"},
+  {"concept_id": "electrostatic_energy", "teacher_strategy": "从电容器储能过渡到空间场能，强调能量分布在电场中。", "blackboard_sequence": ["储能", "能量密度", "空间积分", "高场风险"], "exam_tip": "填空题考公式，简答题考物理解释。", "five_min_review": "能量密度与场强平方成正比，高场区域是风险区域。"}
+]

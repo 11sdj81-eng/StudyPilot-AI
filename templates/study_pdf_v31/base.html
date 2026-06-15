@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <style>
+    {{ design_css | safe }}
+    @page {
+      size: A4;
+      margin: 15mm 15mm 16mm;
+      @top-center { content: "StudyPilot AI · {{ course_name }}"; color: var(--subtext); font-size: 9pt; }
+      @bottom-center { content: counter(page); color: var(--subtext); font-size: 9pt; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-size: var(--font-body);
+      line-height: 1.58;
+    }
+    h1,h2,h3 { margin: 0 0 8px; line-height: 1.25; color: var(--text); break-after: avoid; }
+    h1 { font-size: var(--font-cover-title); }
+    h2 { font-size: var(--font-h1); margin-top: 19px; padding-bottom: 5px; border-bottom: 2px solid var(--accent-green); }
+    h3 { font-size: var(--font-h2); margin-top: 10px; }
+    p { margin: 4px 0 7px; }
+    ul,ol { margin: 5px 0 8px 20px; padding: 0; }
+    li { margin: 2px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: var(--font-table); break-inside: avoid; }
+    th,td { border: 1px solid var(--border); padding: 6px 7px; vertical-align: top; }
+    th { background: var(--tip-bg); }
+    .cover { min-height: 218mm; display:flex; flex-direction:column; justify-content:center; page-break-after: always; }
+    .brand { font-size: 17px; font-weight: 800; color: var(--primary); }
+    .subtitle { color: var(--subtext); font-size: 18px; margin-top: 8px; }
+    .meta-grid { display:grid; grid-template-columns: repeat(2,1fr); gap: 9px; margin-top: 22px; }
+    .meta-item { background: var(--paper); border:1px solid var(--border); border-radius: 14px; padding: 9px 11px; }
+    .toc-sheet { background: var(--paper); border:1px solid var(--border); border-radius:16px; padding:16px; margin: 0 0 15px; break-inside: avoid; }
+    .toc-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items:start; }
+    .toc-list { list-style:none; margin:0; padding:0; }
+    .toc-list li { display:flex; justify-content:space-between; border-bottom:1px dotted var(--border); padding:4px 0; }
+    .reading-path { background: var(--tip-bg); border:1px solid var(--accent-green); border-radius:14px; padding:10px 12px; }
+    .section { break-before:auto; }
+    .card,.concept-card,.example-card,.formula-card,.diagram-block,.source-card,.mistake-box,.rubric-box,.variant-box {
+      background: var(--paper);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:11px 13px;
+      margin:8px 0 11px;
+      break-inside: avoid;
+      box-shadow:0 1px 2px rgba(80,70,50,.04);
+    }
+    .concept-card { border-left:4px solid var(--primary); }
+    .example-card { background: var(--example-bg); border-left:4px solid var(--warning); }
+    .formula-card { background: var(--formula-bg); }
+    .mistake-box { background: var(--mistake-bg); border-left:4px solid var(--error); }
+    .tip-box { background: var(--tip-bg); border:1px solid var(--accent-green); border-radius:14px; padding:10px 12px; margin:8px 0; break-inside: avoid; }
+    .tag { display:inline-block; border:1px solid var(--accent-green); color:#526f4f; border-radius:999px; padding:1px 7px; font-size:11px; margin-right:4px; }
+    .formula-line { font-family: Georgia, "Times New Roman", serif; font-size: var(--font-formula); text-align:center; padding:7px; background:var(--paper); border-radius:10px; border:1px solid var(--border); }
+    .formula-no { float:right; color: var(--subtext); font-size: 12px; }
+    .diagram-block { padding: 9px 10px; }
+    .diagram-block img { width:100%; max-height:255px; object-fit:contain; display:block; margin:2px auto 6px; }
+    .figure-title { font-weight:800; color:#526f4f; font-size:14px; margin-bottom:5px; }
+    .caption { color: var(--subtext); font-size: var(--font-caption); }
+    .why { background: var(--tip-bg); border-radius:10px; padding:5px 8px; margin-top:5px; font-size:12px; }
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .three-col { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+    .steps { counter-reset: step; list-style:none; margin-left:0; }
+    .steps li { counter-increment:step; position:relative; padding-left:25px; margin:4px 0; }
+    .steps li::before { content:counter(step); position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; background:var(--primary); color:white; text-align:center; line-height:18px; font-size:11px; }
+    .compact { font-size:13px; line-height:1.45; }
+    .exam-paper { background: var(--paper); padding: 10px 14px; border:1px solid var(--border); border-radius:14px; }
+    .exam-question { margin: 7px 0 10px; break-inside: avoid; }
+    .exam-question img { max-height: 190px; }
+    .answer-section { page-break-before: always; }
+    .source-card { font-size:12.5px; color:#4b5563; }
+    .small-muted { color: var(--subtext); font-size: 12px; }
+    .page-break { page-break-before: always; }
+    .no-break { break-inside: avoid; }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], tags: 'none' },
+      svg: { fontCache: 'none' },
+      startup: { pageReady: () => MathJax.startup.defaultPageReady().then(async () => {
+        const nodes = Array.from(document.querySelectorAll('.formula-line[data-tex]'));
+        for (const node of nodes) {
+          try {
+            const svg = await MathJax.tex2svgPromise(node.dataset.tex, {display:true});
+            svg.setAttribute('aria-label', node.textContent.trim());
+            node.innerHTML = '';
+            node.appendChild(svg);
+          } catch (e) {}
+        }
+        document.body.classList.add('math-ready');
+      }) }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body class="{{ body_class|default('') }}">
+{% block body %}{% endblock %}
+</body>
+</html>

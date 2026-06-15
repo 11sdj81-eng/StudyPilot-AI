@@ -1,0 +1,50 @@
+{
+  "prog_mirror_method_6": {
+    "source_type": "programmatic",
+    "source_file": "image_plane_potential_case.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "mirror_method",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "image plane potential case",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/mirror_method/images/image_plane_potential_case.svg",
+    "created_at": "2026-06-14T15:02:38.106328+00:00"
+  },
+  "prog_mirror_method_7": {
+    "source_type": "programmatic",
+    "source_file": "image_plane_problem.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "mirror_method",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "image plane problem",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/mirror_method/images/image_plane_problem.svg",
+    "created_at": "2026-06-14T15:02:38.106481+00:00"
+  },
+  "prog_mirror_method_8": {
+    "source_type": "programmatic",
+    "source_file": "image_plane_quick.svg",
+    "source_page": null,
+    "quality_score": 8.0,
+    "match_score": 20.0,
+    "final_score": 38.0,
+    "tags": [
+      "mirror_method",
+      "programmatic",
+      "fallback"
+    ],
+    "caption": "image plane quick",
+    "image_path": "/Users/sudongjian/Desktop/study/StudyPilot-AI/data/figure_bank/electromagnetic_static/mirror_method/images/image_plane_quick.svg",
+    "created_at": "2026-06-14T15:02:38.106613+00:00"
+  }
+}

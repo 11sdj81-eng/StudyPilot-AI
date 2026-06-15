@@ -1,0 +1,8 @@
+{% if diagram %}
+<figure class="diagram-block">
+  <div class="figure-title">图 {{ diagram.figure_no }} {{ diagram.title }}</div>
+  <img src="{{ diagram.path }}" alt="{{ diagram.title }}">
+  <figcaption class="caption">{{ diagram.caption }}</figcaption>
+  <div class="why"><strong>为什么放这张图：</strong>{{ diagram.why_needed }}</div>
+</figure>
+{% endif %}

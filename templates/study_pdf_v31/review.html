@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>章节复习讲义</h1>
+  <p class="subtitle">从教材主线到考试题型，适合打印和 GoodNotes 长期复习</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>资料类型</strong><br>Review · 章节复习讲义</div>
+    <div class="meta-item"><strong>学习主线</strong><br>场 → 通量 → 电位 → 边界 → 镜像 → 能量</div>
+    <div class="meta-item"><strong>日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+{% include "components/toc_compact.html" %}
+<section class="section">
+  <h2>知识地图：先建立场，再解决题</h2>
+  <div class="tip-box">
+    <p>第一章不要按公式死背。先把“电场强度”当作描述空间每一点作用强弱的矢量，再用“高斯定理”在高对称问题中快速求场；当场不方便直接求时，转向“电位”；遇到介质或导体，优先检查边界条件；镜像法和静电能量通常出现在综合题或工程解释里。</p>
+  </div>
+</section>
+{% for block in concept_blocks %}
+<section class="section">
+  {% set concept = block.concept %}{% set mistakes = concept.common_mistakes %}{% include "components/concept_card.html" %}
+  {% set diagram = block.diagram %}{% include "components/diagram_block.html" %}
+  {% for formula in block.formulas %}{% include "components/formula_card.html" %}{% endfor %}
+  {% for example in block.examples %}{% include "components/example_card.html" %}{% endfor %}
+  <div class="tip-box"><strong>本节你必须会：</strong>{{ block.must_know }}</div>
+</section>
+{% endfor %}
+<section class="section">
+  <h2>公式总表</h2>
+  <table>
+    <thead><tr><th>公式</th><th>含义</th><th>适用条件</th><th>常见考法</th></tr></thead>
+    <tbody>{% for f in formulas %}<tr><td>{{ f.display_text }}</td><td>{{ f.user_visible_text }}</td><td>{{ f.conditions }}</td><td>{{ f.display_name }}</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+<section class="section">
+  <h2>自测题</h2>
+  {% for q in self_tests %}<article class="card"><h3>{{ loop.index }}. {{ q.question }}</h3><p><strong>答案：</strong>{{ q.answer }}</p><p><strong>解析：</strong>{{ q.analysis }}</p><p class="small-muted">回看：{{ q.review }}</p></article>{% endfor %}
+</section>
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

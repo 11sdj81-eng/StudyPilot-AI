@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>{{ title }}</title></head>
+<body class="{{ body_class }}">
+<div class="running-header">{{ course_name }} · 模拟试卷</div>
+
+<section class="exam-cover page-break">
+  <div class="exam-header">
+    <h1>{{ university }}《{{ course_name }}》</h1>
+    <h2>{{ task_type }}</h2>
+    <div class="exam-meta">
+      <span>满分：100 分</span>
+      <span>考试时间：120 分钟</span>
+      <span>{{ generated_at }}</span>
+    </div>
+    <div class="exam-notice">
+      <p><strong>注意事项：</strong></p>
+      <ol><li>请在答题纸上作答，试卷上作答无效。</li><li>考试结束后请将试卷和答题纸一并交回。</li></ol>
+    </div>
+  </div>
+</section>
+
+<main>
+{% for section in sections %}
+<section class="exam-section {{ section.class_name }}">
+  <h1>{{ section.title }}</h1>
+  <div class="section-body">{{ section.html | safe }}</div>
+</section>
+{% endfor %}
+</main>
+
+<section class="exam-answer page-break">
+  <h1>答案解析</h1>
+  <div class="answer-body">{{ sections[-1].html | safe if sections else '' }}</div>
+</section>
+
+<section class="sources page-break">
+  <h1>参考来源</h1>
+  {% if sources %}
+  <table class="source-table">
+    <thead><tr><th>来源</th><th>页码</th><th>类型</th><th>摘要</th></tr></thead>
+    <tbody>
+    {% for source in sources %}
+    <tr><td><strong>{{ source.ref }}</strong><br>{{ source.filename }}</td><td>{{ source.page }}</td><td>{{ source.resource_type }}</td><td>{{ source.summary }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</section>
+</body>
+</html>

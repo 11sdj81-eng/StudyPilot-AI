@@ -1,0 +1,12 @@
+<article class="example-card">
+  <h3>{{ example.display_name }}</h3>
+  <p><span class="tag">考点：{{ example.exam_focus }}</span><span class="tag">难度：{{ example.difficulty }}</span></p>
+  <p><strong>题目：</strong>{{ example.question }}</p>
+  {% set diagram = example.diagram %}{% include "components/diagram_block.html" %}
+  <p><strong>看到什么关键词识别题型：</strong>{{ example.keyword_hint }}</p>
+  <p><strong>老师讲法：</strong>{{ example.teacher_comment }}</p>
+  {% set steps = example.solution_steps %}{% include "components/solution_steps.html" %}
+  <p><strong>标准答案：</strong>{{ example.answer }}</p>
+  {% set mistakes = example.common_mistakes %}{% include "components/mistake_box.html" %}
+  {% set variants = example.variants %}{% include "components/variant_box.html" %}
+</article>

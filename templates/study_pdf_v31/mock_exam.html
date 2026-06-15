@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover">
+  <div class="brand">StudyPilot AI</div>
+  <h1>电磁场与电磁波<br>第一章静电场模拟试卷</h1>
+  <p class="subtitle">90 分钟 · 100 分 · 难度按期末复习卷设计</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>选择题</strong><br>5 × 4 = 20 分</div>
+    <div class="meta-item"><strong>填空题</strong><br>5 × 4 = 20 分</div>
+    <div class="meta-item"><strong>简答题</strong><br>2 × 10 = 20 分</div>
+    <div class="meta-item"><strong>计算/综合题</strong><br>2 × 20 = 40 分</div>
+  </div>
+</section>
+<section class="exam-paper compact">
+  <h2>一、选择题</h2>
+  {% for q in sections.choice %}{% include "components/exam_question.html" %}{% endfor %}
+  <h2>二、填空题</h2>
+  {% for q in sections.fill %}{% include "components/exam_question.html" %}{% endfor %}
+  <h2>三、简答题</h2>
+  {% for q in sections.short %}{% include "components/exam_question.html" %}{% endfor %}
+  <h2>四、计算与综合题</h2>
+  {% for q in sections.calc %}{% include "components/exam_question.html" %}{% endfor %}
+</section>
+<section class="answer-section">
+  <h2>参考答案与评分标准</h2>
+  {% for q in answers %}
+  <article class="card">
+    <h3>{{ q.no }}. {{ q.answer }}</h3>
+    <p><strong>解析：</strong>{{ q.analysis }}</p>
+    {% set rubric = q.rubric %}{% include "components/rubric_box.html" %}
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

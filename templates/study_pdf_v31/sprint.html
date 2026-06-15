@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="cover">
+  <div class="brand">StudyPilot AI</div>
+  <h1>第一章静电场<br>考前 30 分钟救命册</h1>
+  <p class="subtitle">只抓会救分的公式、图像、套路和易错点</p>
+  <div class="meta-grid">
+    <div class="meta-item"><strong>课程</strong><br>{{ course_name }}</div>
+    <div class="meta-item"><strong>定位</strong><br>考前快速翻阅，不替代完整复习</div>
+    <div class="meta-item"><strong>重点</strong><br>高斯 / 镜像 / 边界 / 电位 / 能量</div>
+    <div class="meta-item"><strong>日期</strong><br>{{ generated_at }}</div>
+  </div>
+</section>
+{% include "components/toc_compact.html" %}
+<section class="section compact">
+  <h2>如果只剩 5 分钟</h2>
+  <div class="tip-box">
+    <ol>
+      <li>先背：切向看 E，法向看 D；电场等于电位负梯度。</li>
+      <li>再看：高斯题先判断对称性，镜像法先画真电荷和镜像电荷。</li>
+      <li>最后检查：分段、方向、边界、1/2 系数。</li>
+    </ol>
+  </div>
+</section>
+<section class="section compact">
+  <h2>三张速记图</h2>
+  <div class="three-col">{% for diagram in diagrams %}{% include "components/diagram_block.html" %}{% endfor %}</div>
+</section>
+<section class="section compact">
+  <h2>救命卡</h2>
+  {% for card in cards %}
+  <article class="card">
+    <h3>{{ card.name }}</h3>
+    <p><strong>一句话：</strong>{{ card.one_line }}</p>
+    <p><strong>必背公式：</strong>{{ card.formulas | join("；") }}</p>
+    <p><strong>适用条件：</strong>{{ card.conditions }}</p>
+    <p><strong>老师怎么考：</strong>{{ card.exam_usage | join("；") }}</p>
+    <p><strong>经典微题：</strong>{{ card.micro_question }}</p>
+    <p><strong>3 步解法：</strong>{{ card.steps | join(" → ") }}</p>
+    <p><strong>易错点：</strong>{{ card.mistake }}</p>
+    <p><strong>回看位置：</strong>{{ card.review_location }}　<strong>最后 10 秒：</strong>{{ card.ten_second }}</p>
+  </article>
+  {% endfor %}
+</section>
+<section class="section compact">
+  <h2>5 分钟保底题</h2>
+  {% for q in rescue_questions %}
+  <article class="card"><strong>{{ loop.index }}. {{ q.question }}</strong><p>答案：{{ q.answer }}</p><p class="small-muted">回看：{{ q.review }}</p></article>
+  {% endfor %}
+</section>
+<section class="section">
+  <h2>参考来源</h2>
+  {% for source in sources %}<article class="source-card">{{ source }}</article>{% endfor %}
+</section>
+{% endblock %}

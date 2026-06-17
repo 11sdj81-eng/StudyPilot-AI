@@ -302,7 +302,7 @@ def build_generation_prompt(
 {context_block}
 {LATEX_RULES}{TEXTBOOK_ALIGNMENT}{SOURCE_RULES}
 
-请生成一份接近北京邮电大学期末风格的正式模拟试卷。
+请根据课程教材和真题题型，生成一份正式模拟试卷。
 
 # 试卷说明
 包含考试时间、总分、答题要求。

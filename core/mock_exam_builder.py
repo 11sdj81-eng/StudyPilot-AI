@@ -74,7 +74,7 @@ def build_complete_mock_exam(db: StudyDatabase) -> ExamPaper:
         raise ValueError("MockExam 题量或总分不满足 14 题 / 100 分")
 
     return ExamPaper(
-        title="第一章 静电场 BUPT Style Mock Exam",
+        title="第一章 静电场 Mock Exam",
         instructions=["90 分钟，100 分。", "选择题 5 道，填空题 5 道，简答题 2 道，计算/综合题 2 道。", "每题均绑定知识点、公式和来源依据。"],
         questions=questions,
         source_basis="考试题型库驱动 + 本章公式约束 + 教材同范围例题改编",

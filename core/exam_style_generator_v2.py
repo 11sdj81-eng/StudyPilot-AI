@@ -1,4 +1,4 @@
-"""BUPT-style mock exam blueprint with source metadata."""
+"""Mock exam blueprint with source metadata."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from core.example_generator_v2 import electrostatics_question_pool
 def bupt_style_mock_blueprint_v2() -> dict:
     pool = electrostatics_question_pool()
     return {
-        "style": "BUPT Style Mock Exam",
+        "style": "Mock Exam (exam-driven)",
         "source_basis": "上传期末试卷题型结构 + 教材第一章例题/习题范围 + 本地同类题池",
         "question_mix": {
             "choice": 6,

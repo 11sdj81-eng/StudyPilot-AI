@@ -6,7 +6,7 @@
   "subject_type_error_count": 0,
   "debug_text_leak_count": 0,
   "tests_passed": true,
-  "git_pushed": false,
+  "git_pushed": true,
   "issues_found": [
     "active_subject now synced with active_subject_label on recognition confirm",
     "active_course synced to course_id via _sync_active_course_to_course_id()",
@@ -28,5 +28,6 @@
     "core/study_object_renderer.py",
     "core/output_manager.py",
     "tests/test_course_classifier.py"
-  ]
+  ],
+  "commit_hash": "7d1e974"
 }

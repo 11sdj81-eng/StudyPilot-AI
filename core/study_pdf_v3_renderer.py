@@ -184,9 +184,10 @@ def _attach_formula_numbers(formulas: list[dict[str, Any]]) -> None:
 
 
 def _base_context(title: str, extra: dict[str, Any]) -> dict[str, Any]:
+    course_name = extra.pop("course_name", None) or "课程资料"
     return {
         "title": title,
-        "course_name": "电磁场与电磁波",
+        "course_name": course_name,
         "generated_at": datetime.now().strftime("%Y-%m-%d"),
         **extra,
     }

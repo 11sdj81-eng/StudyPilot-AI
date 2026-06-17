@@ -215,7 +215,8 @@ def _env() -> Environment:
 
 
 def _base(title: str, extra: dict[str, Any]) -> dict[str, Any]:
-    return {"title": title, "course_name": "电磁场与电磁波", "generated_at": datetime.now().strftime("%Y-%m-%d"), "design_css": css_variables(), **extra}
+    course_name = extra.pop("course_name", None) or "课程资料"
+    return {"title": title, "course_name": course_name, "generated_at": datetime.now().strftime("%Y-%m-%d"), "design_css": css_variables(), **extra}
 
 
 def _asset_to_diagram(asset: TeachingAsset | None, figure_no: str) -> dict[str, Any] | None:

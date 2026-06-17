@@ -4,6 +4,7 @@ Session-state-driven wizard: Home → Goal → Upload → Recognition →
 Preferences → Progress → Results → Next Steps.
 """
 
+import hashlib
 import json
 import time
 from datetime import datetime
@@ -34,6 +35,7 @@ from core.textbook_asset_extractor import extract_textbook_assets
 from core.theme import inject_theme
 from core.goal_parser import parse_goal_input
 from core.assistant_state import get_bunny_message, get_bunny_emoji, render_bunny_bubble, render_bunny_card
+from core.course_classifier import CourseClassifier
 from core.user_profile import load_profile, save_profile, update_profile_from_goal_text, export_profile_summary
 from core.personalization_engine import PersonalizationEngine, build_learning_path_nodes
 from core.output_manager import (
@@ -199,6 +201,23 @@ def init_session_value(key: str, value: object) -> None:
         st.session_state[key] = value
 
 
+def _sync_active_course_to_course_id() -> None:
+    """Ensure course_id matches active_course to prevent sidebar mismatch."""
+    active_course = st.session_state.get("active_course")
+    if not active_course:
+        return
+    courses = load_courses()
+    # Try to find matching course by name
+    for c in courses:
+        if c.get("course_name", "").strip() == active_course.strip():
+            st.session_state["course_id"] = c["course_id"]
+            return
+    # If no match found, create a new course entry
+    university = st.session_state.get("active_subject_label") or ""
+    new_course = create_course(university, active_course)
+    st.session_state["course_id"] = new_course["course_id"]
+
+
 # ── Session Initialisation ─────────────────────────────────────────────────
 
 def init_session() -> None:
@@ -225,6 +244,14 @@ def init_session() -> None:
         "debug_mode": False,
         "current_run_id": None,
         "bunny_mood": "neutral",
+        # ── Unified course state (v1.3 fix) ──
+        "active_course": None,          # 唯一课程状态源
+        "active_chapter": None,         # 当前识别章节
+        "active_subject": None,         # 当前学科类型
+        "active_subject_label": None,   # 学科中文标签
+        "recognition_source": {},       # 识别来源信息 {course_source, chapter_source, subject_source}
+        "uploaded_file_hashes": [],     # 已上传文件哈希列表（用于检测新文件）
+        "uploaded_file_names": [],      # 已上传文件名列表
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -382,6 +409,15 @@ def page_home() -> None:
     profile = load_profile()
     engine = PersonalizationEngine(profile)
     today = engine.build_today_card()
+
+    # ── Override with active_course (unified state source) ──
+    active_course = st.session_state.get("active_course")
+    active_chapter = st.session_state.get("active_chapter")
+    if active_course:
+        today["course"] = active_course
+        today["has_profile"] = True
+    if active_chapter:
+        today["chapter"] = active_chapter
 
     st.markdown("---")
     if today["has_profile"]:
@@ -607,13 +643,18 @@ def page_goal() -> None:
                 profile.weak_points = st.session_state.weak_points
                 if parsed.get("course"):
                     profile.course_name = parsed["course"]
+                    st.session_state.active_course = parsed["course"]
                 if parsed.get("chapter"):
                     profile.chapter_name = parsed["chapter"]
+                    st.session_state.active_chapter = parsed["chapter"]
                 if st.session_state.get("prefs_output_style"):
                     profile.preferred_pdf_style = st.session_state.prefs_output_style
                 save_profile(profile)
             except Exception:
                 pass
+
+            # Sync active_course → course_id
+            _sync_active_course_to_course_id()
 
             navigate_to("upload")
             st.rerun()
@@ -680,7 +721,37 @@ def page_upload_wizard() -> None:
                         c2.caption(tr("upload_status_pending"))
 
     if uploaded_any:
+        # ── Collect all uploaded filenames for recognition reset ──
+        all_uploaded_names: list[str] = []
+        for zc in zone_configs:
+            uf_list = st.session_state.get(f"upload_{zc['key']}", [])
+            for uf in uf_list:
+                all_uploaded_names.append(uf.name)
+
         if st.button("📤 解析并上传全部资料", type="primary"):
+            # ── Compute file hashes & reset recognition cache on new files ──
+            new_hashes: list[str] = []
+            for zc in zone_configs:
+                uf_list = st.session_state.get(f"upload_{zc['key']}", [])
+                for uf in uf_list:
+                    file_hash = hashlib.md5(uf.getbuffer()).hexdigest()
+                    new_hashes.append(file_hash)
+
+            prev_hashes = set(st.session_state.get("uploaded_file_hashes", []))
+            if set(new_hashes) != prev_hashes:
+                # New files detected — clear all recognition cache
+                st.session_state.active_course = None
+                st.session_state.active_chapter = None
+                st.session_state.active_subject = None
+                st.session_state.active_subject_label = None
+                st.session_state.recognition_source = {}
+                st.session_state.uploaded_file_hashes = new_hashes
+                st.session_state.uploaded_file_names = all_uploaded_names
+                # Also reset legacy recog keys
+                for legacy_key in ("recog_course", "recog_chapter", "recog_subject"):
+                    if legacy_key in st.session_state:
+                        del st.session_state[legacy_key]
+
             with st.status(tr("upload_processing"), expanded=True) as status:
                 course_dir = Path("data") / "uploads" / course_id
                 course_dir.mkdir(parents=True, exist_ok=True)
@@ -759,10 +830,54 @@ def page_ai_recognition() -> None:
     course = current_course() or {}
     parsed = st.session_state.get("parsed_goal", {})
 
-    # Rule-based detection
-    detected_course = parsed.get("course") or course.get("course_name") or "电磁场与电磁波"
-    detected_chapter = parsed.get("chapter") or "第一章 静电场"
-    detected_subject = "工程类"
+    # ── Classify from uploaded files ──
+    classifier = CourseClassifier()
+    uploaded_names = st.session_state.get("uploaded_file_names", [])
+    rec_result = classifier.classify_full(uploaded_names) if uploaded_names else {}
+
+    # ── Determine course: classifier → active_course → parsed → course → fallback ──
+    detected_course = (
+        rec_result.get("course")
+        or st.session_state.get("active_course")
+        or parsed.get("course")
+        or course.get("course_name")
+        or None
+    )
+    course_confidence = rec_result.get("course_confidence", 0.0)
+    course_source = rec_result.get("course_source", "")
+    course_keywords = rec_result.get("course_matched_keywords", [])
+
+    # ── Determine chapter: classifier ONLY, no history fallback ──
+    chapter_result = classifier.detect_chapter(uploaded_names, course_name=detected_course) if uploaded_names else {}
+    detected_chapter = chapter_result.get("chapter_name")
+    chapter_confidence = chapter_result.get("confidence", 0.0)
+    chapter_source = chapter_result.get("source", "")
+
+    # ── Determine subject: classifier ONLY ──
+    detected_subject_type = rec_result.get("subject_type")
+    detected_subject_label = rec_result.get("subject_label")
+    subject_confidence = rec_result.get("subject_confidence", 0.0)
+    subject_source = rec_result.get("subject_source", "")
+
+    # ── Persist to unified state ──
+    if detected_course:
+        st.session_state.active_course = detected_course
+    if detected_chapter and chapter_confidence >= 0.7:
+        st.session_state.active_chapter = detected_chapter
+    else:
+        st.session_state.active_chapter = None
+    if detected_subject_type:
+        st.session_state.active_subject = detected_subject_type
+        st.session_state.active_subject_label = detected_subject_label
+    st.session_state.recognition_source = {
+        "course_source": course_source,
+        "course_confidence": course_confidence,
+        "chapter_source": chapter_source,
+        "chapter_confidence": chapter_confidence,
+        "subject_source": subject_source,
+        "subject_confidence": subject_confidence,
+    }
+
     task_key = st.session_state.get("selected_task_type", "systematic_study")
     task_labels_map = {
         "systematic_study": "Review / 章节复习",
@@ -771,34 +886,84 @@ def page_ai_recognition() -> None:
         "past_paper": "PastPaper / 真题精讲",
     }
 
-    # Safe init: set defaults BEFORE widget creation so Streamlit can bind keys
-    init_session_value("recog_course", detected_course)
-    init_session_value("recog_chapter", detected_chapter)
-    init_session_value("recog_subject", detected_subject)
+    # ── Chapter display logic ──
+    if chapter_confidence >= 0.7 and detected_chapter:
+        chapter_display = detected_chapter
+        chapter_display_source = f"（来源：{chapter_source} {chapter_confidence:.2f}）"
+    else:
+        chapter_display = "未识别"
+        chapter_display_source = "（无高置信匹配）"
+
+    # ── Course display logic ──
+    if detected_course and course_confidence > 0:
+        course_display = detected_course
+        course_display_source = f"（来源：{course_source} {course_confidence:.2f}）"
+    elif detected_course:
+        course_display = detected_course
+        course_display_source = "（手动设置）"
+    else:
+        course_display = "未识别"
+        course_display_source = "（无匹配）"
+
+    # ── Subject display logic ──
+    if detected_subject_label and subject_confidence > 0:
+        subject_display = detected_subject_label
+        subject_display_source = f"（来源：{subject_source} {subject_confidence:.2f}）"
+    elif detected_subject_label:
+        subject_display = detected_subject_label
+        subject_display_source = "（默认）"
+    else:
+        subject_display = "未识别"
+        subject_display_source = "（无匹配）"
+
+    # ── Build subject options including detected value ──
+    subject_options = ["工程类", "理科类", "数学类", "文科类", "医学类"]
+    if detected_subject_label and detected_subject_label not in subject_options:
+        subject_options.insert(0, detected_subject_label)
+    subject_default = detected_subject_label if detected_subject_label in subject_options else "工程类"
+
+    # Safe init widgets
+    init_session_value("recog_course", course_display)
+    init_session_value("recog_chapter", chapter_display)
+    init_session_value("recog_subject", subject_default)
 
     with st.container(border=True):
         st.markdown(f"**📚 {tr('recognition_course')}**")
+        st.caption(course_display_source)
         st.text_input(
             tr("recognition_course"), label_visibility="collapsed", key="recog_course",
         )
 
         st.markdown(f"**📖 {tr('recognition_chapter')}**")
+        st.caption(chapter_display_source)
         st.text_input(
             tr("recognition_chapter"), label_visibility="collapsed", key="recog_chapter",
         )
 
         st.markdown(f"**🔬 {tr('recognition_subject')}**")
+        st.caption(subject_display_source)
         st.selectbox(
             tr("recognition_subject"),
-            ["工程类", "理科类", "文科类", "医学类"],
+            subject_options,
             label_visibility="collapsed", key="recog_subject",
         )
 
         st.markdown(f"**📤 {tr('recognition_recommended')}**")
         st.info(task_labels_map.get(task_key, "Review"))
 
-        st.markdown(f"**⚠️ {tr('recognition_risk')}**")
-        st.warning(tr("recognition_risk_default"))
+        # ── Match quality warning ──
+        if not detected_course or course_confidence < 0.5:
+            st.markdown(f"**⚠️ {tr('recognition_risk')}**")
+            st.warning("课程识别置信度较低，建议手动确认课程名称。")
+        elif chapter_confidence < 0.7:
+            st.markdown(f"**⚠️ {tr('recognition_risk')}**")
+            st.warning("章节未能高置信度识别，已显示「未识别」，可手动填写。")
+        else:
+            st.markdown(f"**✅ 识别状态**")
+            st.success(
+                f"课程匹配关键词：{'、'.join(course_keywords[:5]) if course_keywords else '—'} ｜ "
+                f"置信度：{course_confidence:.2f}"
+            )
 
     # 🐰
     st.markdown(
@@ -813,7 +978,31 @@ def page_ai_recognition() -> None:
             st.rerun()
     with col_next:
         if st.button(tr("wizard_continue"), type="primary", key="recog_next"):
-            # Values are already in session_state via widget key binding — no manual set needed
+            # Sync widget values back to unified state
+            st.session_state.active_course = st.session_state.get("recog_course")
+            st.session_state.active_chapter = st.session_state.get("recog_chapter")
+            st.session_state.active_subject_label = st.session_state.get("recog_subject")
+            # Sync active_subject type from label (prevent desync)
+            label = st.session_state.get("recog_subject", "")
+            label_to_type = {
+                "数学类": "math", "理科类": "math",
+                "理工工程类": "engineering", "工程类": "engineering",
+                "文科类": "humanities", "人文社科类": "humanities",
+                "医学类": "language", "语言类": "language",
+            }
+            st.session_state.active_subject = label_to_type.get(label, "engineering")
+            # Sync active_course → profile.course_name (prevent stale profile)
+            try:
+                profile = load_profile()
+                if st.session_state.active_course:
+                    profile.course_name = st.session_state.active_course
+                if st.session_state.active_chapter:
+                    profile.chapter_name = st.session_state.active_chapter
+                save_profile(profile)
+            except Exception:
+                pass
+            # Sync active_course → course_id (prevent sidebar mismatch)
+            _sync_active_course_to_course_id()
             navigate_to("preferences")
             st.rerun()
 
@@ -936,6 +1125,8 @@ def page_progress() -> None:
                 course_id=course.get("course_id", ""),
                 task_type=task_type,
                 user_request=user_request,
+                course_name=st.session_state.get("active_course", course.get("course_name", "")),
+                chapter_name=st.session_state.get("active_chapter", ""),
             )
             st.session_state.current_run_id = run_id
 

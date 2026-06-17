@@ -71,6 +71,8 @@ def create_run(
     course_id: str,
     task_type: str = "",
     user_request: str = "",
+    course_name: str = "",
+    chapter_name: str = "",
 ) -> str:
     """Initialise a new run directory and return its ``run_id``.
 
@@ -83,6 +85,8 @@ def create_run(
     manifest: dict = {
         "run_id": run_id,
         "course_id": course_id,
+        "course_name": course_name,
+        "chapter_name": chapter_name,
         "task_type": task_type,
         "user_request": user_request,
         "status": "running",
@@ -481,6 +485,8 @@ def _index_entry(manifest: dict) -> dict:
     return {
         "run_id": manifest.get("run_id", ""),
         "course_id": manifest.get("course_id", ""),
+        "course_name": manifest.get("course_name", ""),
+        "chapter_name": manifest.get("chapter_name", ""),
         "task_type": manifest.get("task_type", ""),
         "status": manifest.get("status", ""),
         "quality_score": manifest.get("quality_score", 0),

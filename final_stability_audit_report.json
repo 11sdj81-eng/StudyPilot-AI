@@ -1,0 +1,32 @@
+{
+  "state_pollution_count": 0,
+  "course_mismatch_count": 0,
+  "sidebar_mismatch_count": 0,
+  "old_result_leak_count": 0,
+  "subject_type_error_count": 0,
+  "debug_text_leak_count": 0,
+  "tests_passed": true,
+  "git_pushed": false,
+  "issues_found": [
+    "active_subject now synced with active_subject_label on recognition confirm",
+    "active_course synced to course_id via _sync_active_course_to_course_id()",
+    "profile.course_name synced with active_course on recognition confirm",
+    "pdf_engine_v6.py: removed hardcoded '电磁场与电磁波' fallback",
+    "ai_study_pipeline.py: removed hardcoded '电磁场与电磁波' fallback",
+    "study_pdf_v31_renderer.py: _base() now accepts real course_name",
+    "study_pdf_v3_renderer.py: _base_context() now accepts real course_name",
+    "study_object_renderer.py: fixed internal string leaks (diagram_db, QuestionCard)",
+    "output_manager.py: create_run() now saves course_name and chapter_name"
+  ],
+  "files_modified": [
+    "app.py",
+    "core/course_classifier.py",
+    "core/pdf_engine_v6.py",
+    "core/ai_study_pipeline.py",
+    "core/study_pdf_v31_renderer.py",
+    "core/study_pdf_v3_renderer.py",
+    "core/study_object_renderer.py",
+    "core/output_manager.py",
+    "tests/test_course_classifier.py"
+  ]
+}

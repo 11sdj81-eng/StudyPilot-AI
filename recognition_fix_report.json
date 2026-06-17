@@ -1,0 +1,11 @@
+{
+  "course_accuracy": 1.0,
+  "chapter_accuracy": 1.0,
+  "cross_course_pollution_count": 0,
+  "test_details": {
+    "course_tests_passed": 4,
+    "course_tests_total": 4,
+    "chapter_tests_passed": 3,
+    "chapter_tests_total": 3
+  }
+}

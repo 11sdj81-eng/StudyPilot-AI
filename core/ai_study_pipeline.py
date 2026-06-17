@@ -24,7 +24,7 @@ class PipelineResult:
 
 
 def run_ai_driven_pipeline(course: dict | None = None, db_path: str | None = None) -> PipelineResult:
-    course = course or {"course_name": "电磁场与电磁波", "university": "北京邮电大学"}
+    course = course or {"course_name": "课程资料", "university": ""}
     db = load_study_database(db_path)
     role_outputs = {
         "exam_analyst": exam_analyst(db),

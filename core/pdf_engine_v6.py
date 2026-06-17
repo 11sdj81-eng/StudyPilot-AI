@@ -106,8 +106,8 @@ def render_pdf_v6(
     goals = _extract_goals(next((s for s in sections if s.key == "goals"), None))
     model = {
         "title": _display_subtitle(title, task_type),
-        "course_name": _clean_text(course.get("course_name") or "电磁场与电磁波"),
-        "university": _clean_text(course.get("university") or "北京邮电大学"),
+        "course_name": _clean_text(course.get("course_name") or course.get("name") or "课程资料"),
+        "university": _clean_text(course.get("university") or ""),
         "task_type": _task_label(task_type),
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "goals": goals,

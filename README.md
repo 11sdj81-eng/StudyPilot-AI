@@ -32,6 +32,16 @@ Python 3.14 · Streamlit · PyMuPDF · FAISS · sentence-transformers · DeepSee
 
 原始教材、上传资料、模型权重、OCR 缓存、向量库和大体积生成结果不随仓库发布。
 
+## Screenshots / Demo Preview
+
+| 首页 | 目标解析 |
+|------|----------|
+| ![StudyPilot AI 首页](docs/screenshots/01_home.png) | ![StudyPilot AI 目标解析页](docs/screenshots/02_goal_parser.png) |
+
+| 上传资料 | 生成结果 |
+|----------|----------|
+| ![StudyPilot AI 上传资料页](docs/screenshots/03_upload.png) | ![StudyPilot AI 生成结果页](docs/screenshots/04_results.png) |
+
 ## v1.3 最新更新
 
 - **UserProfile** — 持久化学习画像，驱动个性化推荐

@@ -1,6 +1,17 @@
-"""StudyPilot v3 PDF renderer built on Jinja2 + MathJax + Playwright."""
+"""[DEPRECATED — PDF 5.0] StudyPilot v3 PDF renderer.
+
+This renderer is EM-specific and has been replaced by the UniversalRenderPipeline.
+Importing this module will trigger a deprecation warning.
+Use core.pdf_content_v2.universal_pipeline.render_course_pdfs() instead.
+"""
 
 from __future__ import annotations
+
+import warnings
+warnings.warn(
+    "study_pdf_v3_renderer is DEPRECATED. Use UniversalRenderPipeline instead.",
+    DeprecationWarning, stacklevel=2
+)
 
 import json
 import re

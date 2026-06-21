@@ -1,0 +1,63 @@
+[
+  {
+    "id": "pat_bool_simplify",
+    "concept_ids": [
+      "boolean_algebra"
+    ],
+    "type": "计算题",
+    "how_tested": "给定逻辑表达式，用公式法或卡诺图法化简为最简与或式，画出对应的逻辑电路图。",
+    "score_weight": "高",
+    "trap": "忘记证明化简后的表达式与原式等价；遗漏无关项的利用。"
+  },
+  {
+    "id": "pat_kmap_4var",
+    "concept_ids": [
+      "karnaugh_map"
+    ],
+    "type": "计算题",
+    "how_tested": "给出四变量逻辑函数（最小项或与或式），用卡诺图化简，写出最简与或式。",
+    "score_weight": "高",
+    "trap": "卡诺图圈1时遗漏最小项；对角线误作相邻；圈重叠过多。"
+  },
+  {
+    "id": "pat_combinational_analysis",
+    "concept_ids": [
+      "combinational_logic"
+    ],
+    "type": "分析题",
+    "how_tested": "分析给定逻辑电路图的功能：写表达式→列真值表→描述功能。",
+    "score_weight": "中",
+    "trap": "忽略使能端或控制端的作用；级联分析时遗漏中间信号。"
+  },
+  {
+    "id": "pat_combinational_design",
+    "concept_ids": [
+      "combinational_logic",
+      "encoder_decoder"
+    ],
+    "type": "设计题",
+    "how_tested": "用MSI芯片（译码器/数据选择器）实现给定逻辑函数，画出连线图。",
+    "score_weight": "高",
+    "trap": "芯片使能端连接错误；数据输入端0/1接反。"
+  },
+  {
+    "id": "pat_full_adder",
+    "concept_ids": [
+      "adder_comparator"
+    ],
+    "type": "设计题",
+    "how_tested": "设计1位/多位加法器，要求列真值表、写表达式、画电路图。",
+    "score_weight": "中",
+    "trap": "半加器和全加器混淆；进位链分析错误。"
+  },
+  {
+    "id": "pat_ff_waveform",
+    "concept_ids": [
+      "flip_flop"
+    ],
+    "type": "作图题",
+    "how_tested": "给定触发器输入波形和初态，画出输出Q的波形。",
+    "score_weight": "中",
+    "trap": "混淆电平触发和边沿触发；异步置位复位优先级错误。"
+  }
+]

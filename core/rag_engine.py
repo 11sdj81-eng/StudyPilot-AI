@@ -1,4 +1,4 @@
-"""v2.0 Step 2: RAG engine with content-quality pipeline.
+"""v2.0 Step 2: RAG engine with hybrid retrieval (FAISS + BM25).
 
 Returns (content, sources, figures) so the UI can render images separately.
 Applies LaTeX cleaning before returning content.
@@ -11,11 +11,15 @@ from core.figure_planner import plan_figures
 from core.image_generator import safe_generate_figure
 from core.prompt_templates import build_figure_plan_prompt, build_generation_prompt
 from core.symbol_mapper import normalize_generated_content
-from core.vector_store import CourseVectorStore
 
 
 def retrieve(course_id: str, query: str, top_k: int = DEFAULT_TOP_K) -> list[dict]:
-    return CourseVectorStore(course_id).search(query, top_k=top_k)
+    """Hybrid retrieval: FAISS + BM25 → merge → rerank → top_k.
+
+    Returns list of citation dicts with chunk_id, source_file, page, score, preview, text.
+    """
+    from core.hybrid_retrieval import hybrid_search
+    return hybrid_search(course_id, query, top_k=top_k)
 
 
 def generate_with_rag(

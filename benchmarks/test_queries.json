@@ -1,0 +1,317 @@
+[
+  {
+    "query": "分布函数的三条性质是什么",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["分布函数"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "随机变量和普通变量有什么区别",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["随机变量"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "离散型随机变量的分布律怎么写",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["离散型随机变量"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "连续型随机变量的概率密度函数怎么理解",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["连续型随机变量"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "二项分布和泊松分布有什么关系",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用离散分布"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "正态分布标准化公式是什么",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用连续分布"],
+    "expected_source_type": "教材",
+    "query_type": "formula"
+  },
+  {
+    "query": "分布函数怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["分布函数"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "离散型随机变量分布律怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["离散型随机变量"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "连续型密度函数求参数怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["连续型随机变量"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "二项分布概率计算怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用离散分布"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "泊松近似条件是什么",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用离散分布"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "正态分布标准化查表怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用连续分布"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "随机变量函数的分布怎么求",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["随机变量函数的分布"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "随机变量函数变换怎么考",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["随机变量函数的分布"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "均匀分布求概率和期望",
+    "course_id": "probability_ch2",
+    "expected_concepts": ["常用连续分布"],
+    "expected_source_type": "教材",
+    "query_type": "example"
+  },
+  {
+    "query": "电场强度的方向怎么判断",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["电场强度"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "高斯定理的适用条件是什么",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["高斯定理"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "电位和电场是什么关系",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["电位与梯度"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "边界条件切向和法向分别看什么",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["边界条件"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "镜像法的原理是什么",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["镜像法"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "静电能量密度公式是什么",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["静电能量"],
+    "expected_source_type": "教材",
+    "query_type": "formula"
+  },
+  {
+    "query": "电场强度方向叠加怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["电场强度"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "高斯定理分段求场怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["高斯定理"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "电位函数求电场怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["电位与梯度"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "边界条件分量识别怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["边界条件"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "镜像法建模怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["镜像法"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "场能密度怎么考",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["静电能量"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "均匀带电球体电场分布怎么算",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["高斯定理", "电场强度"],
+    "expected_source_type": "教材",
+    "query_type": "example"
+  },
+  {
+    "query": "点电荷电场强度公式是什么",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["电场强度"],
+    "expected_source_type": "教材",
+    "query_type": "formula"
+  },
+  {
+    "query": "接地导体平面的镜像法怎么用",
+    "course_id": "field_wave_ch1",
+    "expected_concepts": ["镜像法"],
+    "expected_source_type": "教材",
+    "query_type": "example"
+  },
+  {
+    "query": "布尔代数的基本运算有哪些",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["布尔代数"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "卡诺图化简的原理是什么",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["卡诺图"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "组合逻辑电路的分析步骤",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["组合逻辑"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "编码器和译码器有什么区别",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["编码器与译码器"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "数据选择器怎么实现逻辑函数",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["数据选择器"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "全加器和半加器有什么区别",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["加法器与比较器"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "触发器的基本类型有哪些",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["触发器"],
+    "expected_source_type": "教材",
+    "query_type": "concept_definition"
+  },
+  {
+    "query": "布尔代数公式法化简怎么考",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["布尔代数"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "四变量卡诺图化简怎么考",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["卡诺图"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "组合逻辑电路分析怎么考",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["组合逻辑"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "用译码器实现逻辑函数怎么考",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["编码器与译码器", "组合逻辑"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "全加器设计怎么考",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["加法器与比较器"],
+    "expected_source_type": "往年题",
+    "query_type": "exam_pattern"
+  },
+  {
+    "query": "触发器波形图怎么画",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["触发器"],
+    "expected_source_type": "教材",
+    "query_type": "example"
+  },
+  {
+    "query": "卡诺图化简步骤是什么",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["卡诺图"],
+    "expected_source_type": "教材",
+    "query_type": "formula"
+  },
+  {
+    "query": "触发器特性方程有哪些",
+    "course_id": "digital_logic_ch3",
+    "expected_concepts": ["触发器"],
+    "expected_source_type": "教材",
+    "query_type": "formula"
+  }
+]

@@ -1,0 +1,913 @@
+{
+  "total_queries": 45,
+  "queries_with_faiss_results": 30,
+  "queries_with_hybrid_results": 30,
+  "faiss": {
+    "top1_accuracy": 0.4667,
+    "top3_recall": 0.5,
+    "citation_accuracy": 0.0,
+    "quality_pass_rate": 0.0533
+  },
+  "hybrid": {
+    "top1_accuracy": 0.6333,
+    "top3_recall": 0.6667,
+    "citation_accuracy": 1.0,
+    "quality_pass_rate": 0.0533
+  },
+  "per_course": {
+    "digital_logic_ch3": {
+      "total_queries": 15,
+      "faiss": null,
+      "hybrid": null
+    },
+    "field_wave_ch1": {
+      "total_queries": 15,
+      "faiss": {
+        "top1_accuracy": 0.7333,
+        "top3_recall": 0.7333,
+        "citation_accuracy": 0.0,
+        "quality_pass_rate": 0.08
+      },
+      "hybrid": {
+        "top1_accuracy": 0.7333,
+        "top3_recall": 0.7333,
+        "citation_accuracy": 1.0,
+        "quality_pass_rate": 0.0933
+      }
+    },
+    "probability_ch2": {
+      "total_queries": 15,
+      "faiss": {
+        "top1_accuracy": 0.2,
+        "top3_recall": 0.2667,
+        "citation_accuracy": 0.0,
+        "quality_pass_rate": 0.0267
+      },
+      "hybrid": {
+        "top1_accuracy": 0.5333,
+        "top3_recall": 0.6,
+        "citation_accuracy": 1.0,
+        "quality_pass_rate": 0.0133
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query": "分布函数的三条性质是什么",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "分布函数"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "随机变量和普通变量有什么区别",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "随机变量"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "离散型随机变量的分布律怎么写",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "离散型随机变量"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "连续型随机变量的概率密度函数怎么理解",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "连续型随机变量"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "二项分布和泊松分布有什么关系",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "常用离散分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "正态分布标准化公式是什么",
+      "course_id": "probability_ch2",
+      "query_type": "formula",
+      "expected_concepts": [
+        "常用连续分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "分布函数怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "分布函数"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.4,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.2,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "离散型随机变量分布律怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "离散型随机变量"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "连续型密度函数求参数怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "连续型随机变量"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "二项分布概率计算怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "常用离散分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "泊松近似条件是什么",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "常用离散分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "正态分布标准化查表怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "常用连续分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "随机变量函数的分布怎么求",
+      "course_id": "probability_ch2",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "随机变量函数的分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "随机变量函数变换怎么考",
+      "course_id": "probability_ch2",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "随机变量函数的分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "均匀分布求概率和期望",
+      "course_id": "probability_ch2",
+      "query_type": "example",
+      "expected_concepts": [
+        "常用连续分布"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "电场强度的方向怎么判断",
+      "course_id": "field_wave_ch1",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "电场强度"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "高斯定理的适用条件是什么",
+      "course_id": "field_wave_ch1",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "高斯定理"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "电位和电场是什么关系",
+      "course_id": "field_wave_ch1",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "电位与梯度"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.2,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.4,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "边界条件切向和法向分别看什么",
+      "course_id": "field_wave_ch1",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "边界条件"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "镜像法的原理是什么",
+      "course_id": "field_wave_ch1",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "镜像法"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "静电能量密度公式是什么",
+      "course_id": "field_wave_ch1",
+      "query_type": "formula",
+      "expected_concepts": [
+        "静电能量"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "电场强度方向叠加怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "电场强度"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "高斯定理分段求场怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "高斯定理"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "电位函数求电场怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "电位与梯度"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.2,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.2,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "边界条件分量识别怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "边界条件"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "镜像法建模怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "镜像法"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.4,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.4,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "场能密度怎么考",
+      "course_id": "field_wave_ch1",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "静电能量"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "均匀带电球体电场分布怎么算",
+      "course_id": "field_wave_ch1",
+      "query_type": "example",
+      "expected_concepts": [
+        "高斯定理",
+        "电场强度"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "点电荷电场强度公式是什么",
+      "course_id": "field_wave_ch1",
+      "query_type": "formula",
+      "expected_concepts": [
+        "电场强度"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "接地导体平面的镜像法怎么用",
+      "course_id": "field_wave_ch1",
+      "query_type": "example",
+      "expected_concepts": [
+        "镜像法"
+      ],
+      "faiss_top1": true,
+      "faiss_top3_recall": 1.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.4,
+      "faiss_count": 5,
+      "hybrid_top1": true,
+      "hybrid_top3_recall": 1.0,
+      "hybrid_citation_acc": 1.0,
+      "hybrid_quality_pass": 0.4,
+      "hybrid_count": 5,
+      "error": ""
+    },
+    {
+      "query": "布尔代数的基本运算有哪些",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "布尔代数"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "卡诺图化简的原理是什么",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "卡诺图"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "组合逻辑电路的分析步骤",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "组合逻辑"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "编码器和译码器有什么区别",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "编码器与译码器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "数据选择器怎么实现逻辑函数",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "数据选择器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "全加器和半加器有什么区别",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "加法器与比较器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "触发器的基本类型有哪些",
+      "course_id": "digital_logic_ch3",
+      "query_type": "concept_definition",
+      "expected_concepts": [
+        "触发器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "布尔代数公式法化简怎么考",
+      "course_id": "digital_logic_ch3",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "布尔代数"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "四变量卡诺图化简怎么考",
+      "course_id": "digital_logic_ch3",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "卡诺图"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "组合逻辑电路分析怎么考",
+      "course_id": "digital_logic_ch3",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "组合逻辑"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "用译码器实现逻辑函数怎么考",
+      "course_id": "digital_logic_ch3",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "编码器与译码器",
+        "组合逻辑"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "全加器设计怎么考",
+      "course_id": "digital_logic_ch3",
+      "query_type": "exam_pattern",
+      "expected_concepts": [
+        "加法器与比较器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "触发器波形图怎么画",
+      "course_id": "digital_logic_ch3",
+      "query_type": "example",
+      "expected_concepts": [
+        "触发器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "卡诺图化简步骤是什么",
+      "course_id": "digital_logic_ch3",
+      "query_type": "formula",
+      "expected_concepts": [
+        "卡诺图"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    },
+    {
+      "query": "触发器特性方程有哪些",
+      "course_id": "digital_logic_ch3",
+      "query_type": "formula",
+      "expected_concepts": [
+        "触发器"
+      ],
+      "faiss_top1": false,
+      "faiss_top3_recall": 0.0,
+      "faiss_citation_acc": 0.0,
+      "faiss_quality_pass": 0.0,
+      "faiss_count": 0,
+      "hybrid_top1": false,
+      "hybrid_top3_recall": 0.0,
+      "hybrid_citation_acc": 0.0,
+      "hybrid_quality_pass": 0.0,
+      "hybrid_count": 0,
+      "error": ""
+    }
+  ]
+}

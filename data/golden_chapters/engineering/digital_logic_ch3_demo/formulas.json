@@ -1,0 +1,65 @@
+[
+  {
+    "id": "de_morgan",
+    "concept_id": "boolean_algebra",
+    "display_name": "De Morgan 定律",
+    "latex": "(AB)' = A' + B', \\quad (A+B)' = A'B'",
+    "display_text": "(AB)'=A'+B', (A+B)'=A'B'",
+    "conditions": "适用于任意两个逻辑变量",
+    "symbol_explanation": {"'": "逻辑非", "+": "逻辑或", "·": "逻辑与（可省略）"}
+  },
+  {
+    "id": "absorption",
+    "concept_id": "boolean_algebra",
+    "display_name": "吸收律",
+    "latex": "A + AB = A, \\quad A(A+B) = A",
+    "display_text": "A+AB=A, A(A+B)=A",
+    "conditions": "与或表达式化简",
+    "symbol_explanation": {}
+  },
+  {
+    "id": "consensus",
+    "concept_id": "boolean_algebra",
+    "display_name": "冗余项定律",
+    "latex": "AB + A'C + BC = AB + A'C",
+    "display_text": "AB+A'C+BC=AB+A'C",
+    "conditions": "BC为冗余项，可消去",
+    "symbol_explanation": {"'": "逻辑非"}
+  },
+  {
+    "id": "minterm_sum",
+    "concept_id": "karnaugh_map",
+    "display_name": "最小项之和",
+    "latex": "F(A,B,C) = \\Sigma m(0,2,5,7)",
+    "display_text": "F=Σm(0,2,5,7)",
+    "conditions": "标准与或式（最小项表达式）",
+    "symbol_explanation": {"Σm": "最小项之和", "0,2,5,7": "使F=1的最小项编号"}
+  },
+  {
+    "id": "full_adder_sum",
+    "concept_id": "adder_comparator",
+    "display_name": "全加器和与进位",
+    "latex": "S = A \\oplus B \\oplus C_{in}, \\quad C_{out} = AB + BC_{in} + AC_{in}",
+    "display_text": "S=A⊕B⊕Cin, Cout=AB+BCin+ACin",
+    "conditions": "全加器输入为A、B、Cin",
+    "symbol_explanation": {"⊕": "异或", "Cin": "低位进位", "Cout": "向高位进位"}
+  },
+  {
+    "id": "d_ff_char_eq",
+    "concept_id": "flip_flop",
+    "display_name": "D触发器特性方程",
+    "latex": "Q^{n+1} = D",
+    "display_text": "Q^(n+1)=D",
+    "conditions": "上升沿/下降沿触发",
+    "symbol_explanation": {"Q^(n+1)": "次态", "D": "输入数据"}
+  },
+  {
+    "id": "jk_ff_char_eq",
+    "concept_id": "flip_flop",
+    "display_name": "JK触发器特性方程",
+    "latex": "Q^{n+1} = J\\overline{Q^n} + \\overline{K}Q^n",
+    "display_text": "Q^(n+1)=J·Qn'+K'·Qn",
+    "conditions": "边沿触发，JK不能同时为1时有翻转功能",
+    "symbol_explanation": {"J": "置位输入", "K": "复位输入", "Qn": "现态"}
+  }
+]
